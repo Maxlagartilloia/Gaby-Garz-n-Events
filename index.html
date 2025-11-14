@@ -3,37 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaby Garzón Events | Decoración de Fiestas y Eventos</title>
+  <title>Gaby Garzón Events | Luxury Event Design & Styling</title>
 
   <!-- Meta SEO -->
-  <meta name="description" content="Decoración de fiestas, cumpleaños, baby showers, bodas y todo tipo de eventos. Salón propio para 300 personas, alquiler de estanterías, mantelería y vajilla en Ecuador.">
-  <meta name="keywords" content="decoración de fiestas, eventos, cumpleaños, bodas, baby shower, mantelería, vajilla, salón para eventos, Gaby Garzón Events">
+  <meta name="description" content="Diseño de eventos de alta clase: cumpleaños, bodas, baby showers y celebraciones memorables. Salón para 300 personas, alquiler de mantelería, vajilla y mobiliario premium.">
+  <meta name="keywords" content="eventos, decoración, bodas, cumpleaños, baby shower, mantelería, vajilla, salón de eventos, Gaby Garzón Events">
   <meta name="author" content="Gaby Garzón Events">
 
-  <!-- ===== Vista previa para WhatsApp y redes ===== -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gabygarzon.crisslombeida.com/">
-  <meta property="og:title" content="Gaby Garzón Events | Decoración & Organización de Eventos">
-  <meta property="og:description" content="Decoración profesional, salón para 300 personas, alquiler de mantelería, vajilla y estanterías. ¡Cotiza tu evento ahora por WhatsApp!">
-  <!-- Cambia esta imagen por el logo o foto oficial de Gaby -->
-  <meta property="og:image" content="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <meta property="og:url" content="https://gabygarzonevents.crisslombeida.com/">
+  <meta property="og:title" content="Gaby Garzón Events | Luxury Event Design">
+  <meta property="og:description" content="Decoración y organización de eventos elegantes con salón propio para 300 personas.">
+  <!-- Cambia esta imagen por tu logo o foto oficial -->
+  <meta property="og:image" content="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_EC">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Fuentes / utilidades -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Fonts & Utilities -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    /* ===== Colores corporativos (evento, elegante) ===== */
     :root{
-      --color-primary:#8b2c7b;     /* fucsia elegante */
-      --color-secondary:#FFAF3F;   /* dorado suave */
-      --color-dark-bg:#171320;
-      --color-soft:#f6eef9;
+      --color-ink:#0a0810;
+      --color-bg:#05030a;
+      --color-rose:#e39abb;
+      --color-rose-soft:#f8e9f1;
+      --color-gold:#f5c26b;
+      --color-ivory:#fdf8f2;
+      --glass-border:rgba(255,255,255,0.16);
     }
 
     html{
@@ -42,535 +44,906 @@
     }
     body{
       font-family:'Inter',sans-serif;
-      background-color:var(--color-dark-bg);
-      color:#fff;
-      line-height:1.6;
-      min-height:100vh;
+      background:radial-gradient(circle at top, #2b1635 0%, #05030a 40%, #020006 100%);
+      color:#f9f7ff;
       margin:0;
-      padding:0;
+      min-height:100vh;
       overflow-x:hidden;
     }
-
-    section{ content-visibility:auto; contain-intrinsic-size:1px 1000px; }
-
-    .bg-primary{ background-color:var(--color-primary); }
-    .text-primary{ color:var(--color-primary); }
-    .bg-secondary{ background-color:var(--color-secondary); }
-    .text-secondary{ color:var(--color-secondary); }
-    .border-secondary{ border-color:var(--color-secondary); }
-
-    .glass-card{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.1);
-      box-shadow:0 6px 24px rgba(0,0,0,0.25);
-    }
-    @supports (backdrop-filter:blur(5px)){
-      .glass-card{ backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+    section{
+      content-visibility:auto;
+      contain-intrinsic-size:1px 1000px;
     }
 
-    /* Fondo animado suave tipo evento */
-    .party-bg{
-      position:relative;
-      background:radial-gradient(circle at top,var(--color-primary) 0%,#09090f 45%, #050509 100%);
+    .font-display{
+      font-family:'Playfair Display',serif;
+      letter-spacing:0.03em;
     }
-    .party-bg::before{
-      content:"";
-      position:absolute; inset:0;
+
+    .glass{
+      background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));
+      border:1px solid var(--glass-border);
+      box-shadow:0 18px 45px rgba(0,0,0,0.6);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .header-blur{
+      background:radial-gradient(circle at top left, rgba(227,154,187,0.22), transparent 55%) ,
+                  rgba(5,3,10,0.96);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .orb-gradient{
+      position:absolute;
+      inset:0;
       background:
-        radial-gradient(circle at 10% 20%, rgba(255,175,63,0.20) 0%, transparent 50%),
-        radial-gradient(circle at 80% 90%, rgba(255,255,255,0.10) 0%, transparent 55%);
+        radial-gradient(circle at 10% 10%, rgba(227,154,187,0.24) 0%, transparent 55%),
+        radial-gradient(circle at 80% 90%, rgba(245,194,107,0.22) 0%, transparent 55%);
       mix-blend-mode:screen;
-      animation:soft-glow 18s infinite ease-in-out;
-      pointer-events:none; z-index:-1;
+      pointer-events:none;
+      opacity:0.8;
+      animation:float-orbs 24s ease-in-out infinite alternate;
+      z-index:-1;
     }
-    @keyframes soft-glow{
-      0%{ opacity:.5; transform:scale(1); }
-      50%{ opacity:.9; transform:scale(1.04); }
-      100%{ opacity:.5; transform:scale(1); }
+    @keyframes float-orbs{
+      0%{ transform:translate3d(0,0,0) scale(1); opacity:0.7;}
+      50%{ transform:translate3d(0,-20px,0) scale(1.05); opacity:0.95;}
+      100%{ transform:translate3d(0,10px,0) scale(1.02); opacity:0.7;}
     }
-    .is-scrolling .party-bg::before{ animation:none !important; }
+    .is-scrolling .orb-gradient{ animation:none !important; }
 
-    /* Logo */
-    .logo-link img{ height:4.5rem; transition:transform .3s; }
-    .logo-link img:hover{ transform:scale(1.05); }
-    @media (min-width:769px){
-      .logo-link img{ height:5.5rem; max-height:5.5rem; }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--color-rose),var(--color-gold));
+      color:#1a1024;
     }
-
-    /* Botón secundario */
-    .btn-hover-secondary:hover{
-      background-color:#ffd18b;
+    .btn-primary:hover{
+      filter:brightness(1.06);
       transform:translateY(-2px);
-      box-shadow:0 4px 15px rgba(255,175,63,0.45);
+      box-shadow:0 12px 25px rgba(227,154,187,0.5);
     }
-
-    /* Botón primario */
-    .btn-hover-primary:hover{
-      filter:brightness(1.1);
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,0.5);
+      background:transparent;
+    }
+    .btn-ghost:hover{
+      background:rgba(255,255,255,0.12);
+      border-color:transparent;
       transform:translateY(-2px);
-      box-shadow:0 4px 15px rgba(0,0,0,0.35);
     }
 
-    .service-icon{ transition:color .3s ease, transform .3s ease; }
-    .service-card:hover .service-icon{ color:var(--color-secondary); transform:scale(1.1); }
-
-    @media (max-width:768px){
-      header.glass-card{
-        backdrop-filter:none !important;
-        -webkit-backdrop-filter:none !important;
-        background:rgba(23,19,32,0.95);
-        box-shadow:0 4px 16px rgba(0,0,0,0.4);
-      }
-      #mobile-menu a{ padding-left:1.5rem; padding-right:1.5rem; }
+    .chip{
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.25);
+      background:linear-gradient(120deg,rgba(227,154,187,0.13),rgba(16,10,30,0.9));
     }
 
-    /* Modal galería */
+    .service-card{
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease;
+      border-radius:1.5rem;
+      border:1px solid rgba(255,255,255,0.08);
+      background:radial-gradient(circle at top,rgba(255,255,255,0.04),rgba(5,3,10,0.97));
+    }
+    .service-card:hover{
+      transform:translateY(-6px) translateZ(0);
+      box-shadow:0 20px 40px rgba(0,0,0,0.7);
+      border-color:rgba(227,154,187,0.6);
+      background:radial-gradient(circle at top,rgba(227,154,187,0.12),rgba(5,3,10,0.97));
+    }
+
+    .service-icon{
+      background:radial-gradient(circle at 30% 0%,rgba(227,154,187,0.5),rgba(5,3,10,1));
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.18);
+      width:3.5rem;
+      height:3.5rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.6rem;
+      color:var(--color-rose-soft);
+      box-shadow:0 12px 30px rgba(0,0,0,0.7);
+    }
+
+    .timeline-dot{
+      width:0.9rem;
+      height:0.9rem;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--color-gold),var(--color-rose));
+      box-shadow:0 0 0 6px rgba(227,154,187,0.25);
+    }
+
+    .gallery-item{ aspect-ratio:4/3; object-fit:cover; }
+
     #gallery-modal{
-      z-index:100; background-color:rgba(0,0,0,0.8);
+      z-index:100; background-color:rgba(3,1,10,0.86);
       transition:opacity .3s ease; display:none;
     }
     #modal-content-wrapper{
       transform-style:preserve-3d;
-      perspective:1000px;
+      perspective:1200px;
     }
     #modal-image{
       max-height:90vh;
       max-width:90vw;
-      box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);
+      box-shadow:0 30px 60px rgba(0,0,0,0.9);
       transform:rotateY(0deg);
       transition:transform .5s ease;
+      border-radius:1.5rem;
     }
-
-    /* Flechas del modal */
     .modal-arrow{
       position:absolute;
       top:50%;
       transform:translateY(-50%);
       width:3rem;
       height:3rem;
-      border-radius:9999px;
-      background:rgba(0,0,0,0.5);
+      border-radius:999px;
+      background:rgba(5,3,10,0.8);
       display:flex;
       align-items:center;
       justify-content:center;
       color:#fff;
-      font-size:1.5rem;
+      font-size:1.4rem;
       cursor:pointer;
-      border:1px solid rgba(255,255,255,0.4);
+      border:1px solid rgba(255,255,255,0.35);
       backdrop-filter:blur(4px);
     }
     .modal-arrow:hover{
-      background:rgba(139,44,123,0.85);
+      background:rgba(227,154,187,0.9);
+      color:#1a1024;
     }
     #modal-prev{ left:-3.5rem; }
     #modal-next{ right:-3.5rem; }
-
     @media (max-width:640px){
-      #modal-prev{ left:0.5rem; }
-      #modal-next{ right:0.5rem; }
+      #modal-prev{ left:0.75rem; }
+      #modal-next{ right:0.75rem; }
     }
 
     ::-webkit-scrollbar{ width:8px; }
-    ::-webkit-scrollbar-thumb{ background:var(--color-secondary); border-radius:4px; }
-    ::-webkit-scrollbar-track{ background:#070710; }
-
-    .gallery-item{ aspect-ratio:4/3; object-fit:cover; }
+    ::-webkit-scrollbar-thumb{ background:linear-gradient(var(--color-rose),var(--color-gold)); border-radius:999px; }
+    ::-webkit-scrollbar-track{ background:#05030a; }
 
     @media (prefers-reduced-motion:reduce){
-      .party-bg::before{ animation:none !important; }
+      .orb-gradient{ animation:none !important; }
     }
   </style>
 </head>
-<body class="party-bg">
+<body>
+  <div class="orb-gradient"></div>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-primary bg-opacity-80 glass-card shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20 md:h-24">
-      <a href="#" class="logo-link flex items-center space-x-3">
-        <!-- Cambia esta imagen por el logo de Gaby -->
-        <img src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gaby Garzón Events Logo" class="w-auto rounded-full">
-        <span class="sr-only">Gaby Garzón Events</span>
+  <!-- HEADER -->
+  <header class="header-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="#top" class="flex items-center space-x-3">
+        <!-- Cambia esta imagen por tu logo -->
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-white/40 shadow-lg">
+          <img src="https://images.pexels.com/photos/1128782/pexels-photo-1128782.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Logo Gaby Garzón Events" class="w-full h-full object-cover">
+        </div>
+        <div class="leading-tight hidden sm:block">
+          <div class="font-display text-xs tracking-[0.2em] text-rose-200 uppercase">Gaby Garzón</div>
+          <div class="text-sm font-semibold text-slate-50">Luxury Event Design</div>
+        </div>
       </a>
 
-      <!-- Navegación escritorio -->
-      <nav class="hidden md:flex space-x-8 items-center font-medium">
-        <a href="#servicios" class="text-white hover:text-secondary transition duration-300">Servicios</a>
-        <a href="#galeria" class="text-white hover:text-secondary transition duration-300">Eventos</a>
-        <a href="#cotizar" class="text-white hover:text-secondary transition duration-300">Cotizar</a>
-        <a href="#faq" class="text-white hover:text-secondary transition duration-300">Preguntas</a>
-        <a href="#contacto" class="text-white hover:text-secondary transition duration-300">Contacto</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#experiencias" class="text-slate-100 hover:text-rose-200 transition">Experiencias</a>
+        <a href="#salon" class="text-slate-100 hover:text-rose-200 transition">Salón & Alquiler</a>
+        <a href="#cotizar" class="text-slate-100 hover:text-rose-200 transition">Cotizar</a>
+        <a href="#galeria" class="text-slate-100 hover:text-rose-200 transition">Galería</a>
+        <a href="#faq" class="text-slate-100 hover:text-rose-200 transition">FAQ</a>
       </nav>
 
-      <!-- Menú móvil -->
-      <button id="menu-toggle" class="md:hidden text-white text-2xl hover:text-secondary transition duration-300">
+      <div class="hidden md:flex items-center space-x-3">
+        <span class="chip px-3 py-1 text-xs text-rose-50 flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Agenda 2025 abierta</span>
+        </span>
+        <a href="#cotizar" class="btn-primary px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.18em] flex items-center space-x-2 shadow-lg">
+          <span>Agendar cita</span>
+          <i class="fa-solid fa-arrow-right text-[0.7rem]"></i>
+        </a>
+      </div>
+
+      <button id="menu-toggle" class="md:hidden text-slate-50 text-2xl">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <!-- Desplegable móvil -->
-    <div id="mobile-menu" class="hidden md:hidden bg-primary bg-opacity-95 py-4 shadow-xl">
-      <nav class="flex flex-col space-y-3 px-6 pb-2 font-medium">
-        <a href="#servicios" class="text-white hover:text-secondary transition duration-300 py-2" onclick="closeMobileMenu()">Servicios</a>
-        <a href="#galeria" class="text-white hover:text-secondary transition duration-300 py-2" onclick="closeMobileMenu()">Eventos</a>
-        <a href="#cotizar" class="text-white hover:text-secondary transition duration-300 py-2" onclick="closeMobileMenu()">Cotizar</a>
-        <a href="#faq" class="text-white hover:text-secondary transition duration-300 py-2" onclick="closeMobileMenu()">Preguntas</a>
-        <a href="#contacto" class="text-white hover:text-secondary transition duration-300 py-2" onclick="closeMobileMenu()">Contacto</a>
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-black/80 backdrop-blur-xl">
+      <nav class="flex flex-col px-6 py-4 space-y-3 text-sm">
+        <a href="#experiencias" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">Experiencias</a>
+        <a href="#salon" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">Salón & Alquiler</a>
+        <a href="#cotizar" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">Cotizar</a>
+        <a href="#galeria" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">Galería</a>
+        <a href="#faq" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">FAQ</a>
+        <a href="#contacto" class="text-slate-100 hover:text-rose-200 py-1" onclick="closeMobileMenu()">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="hero" class="relative party-bg pt-20 pb-20 md:pt-32 md:pb-32 bg-cover bg-center"
-      style="background-image:url('https://images.pexels.com/photos/587739/pexels-photo-587739.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-blend-mode:overlay; background-color:rgba(9,9,15,0.72);">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-4 drop-shadow-lg">
-          Decoración & Organización de <span class="text-secondary">Eventos Inolvidables</span>
-        </h1>
-        <p class="text-lg sm:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto font-medium">
-          Gaby Garzón Events transforma tus ideas en fiestas de ensueño: cumpleaños, baby showers, bodas,
-          primeras comuniones, eventos corporativos y más.
-        </p>
-        <p class="text-base sm:text-lg text-gray-200 mb-10">
-          Salón propio para <span class="font-bold text-secondary">hasta 300 personas</span>, alquiler de
-          estanterías, mantelería, vajilla y decoración completa.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <a href="#cotizar" class="bg-secondary text-black px-8 py-3 rounded-full text-lg font-bold transition duration-300 btn-hover-secondary shadow-2xl">
-            Cotizar mi evento <i class="fas fa-calendar-check ml-2"></i>
-          </a>
-          <a href="#galeria" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-bold transition duration-300 hover:bg-white hover:text-primary hover:border-transparent shadow-2xl">
-            Ver decoraciones <i class="fas fa-heart ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+  <main id="top" class="relative">
 
-    <!-- Servicios -->
-    <section id="servicios" class="py-16 md:py-24 bg-[#0f0b16]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4">Nuestros <span class="text-secondary">Servicios</span></h2>
-        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-          Todo lo que necesitas para una celebración perfecta, en un solo lugar y con el estilo único de
-          <span class="font-semibold">Gaby Garzón Events</span>.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-birthday-cake text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Cumpleaños & Fiestas Temáticas</h3>
-            <p class="text-gray-200">Decoración completa para niños y adultos, mesas de dulces, globos, backings y
-              detalles personalizados según la temática que sueñas.</p>
-          </div>
-
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-baby text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Baby Shower & Revelación de Género</h3>
-            <p class="text-gray-200">Ambientes suaves y elegantes, fondos decorados, estaciones de fotos y detalles
-              tiernos para celebrar la llegada del bebé.</p>
-          </div>
-
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-ring text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Bodas & Recepciones</h3>
-            <p class="text-gray-200">Decoración de iglesia y salón, mesas principales, flores, iluminación ambiental y
-              montaje completo para tu gran día.</p>
-          </div>
-
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-warehouse text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Salón para 300 Personas</h3>
-            <p class="text-gray-200">Local propio totalmente equipado, ideal para eventos grandes, con distribución
-              flexible, área para pista de baile y zona de buffet.</p>
-          </div>
-
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-chair text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Alquiler de Estanterías & Decoración</h3>
-            <p class="text-gray-200">Estanterías, estructuras, fondos decorativos, bases, columnas y mobiliario para
-              realzar tu decoración o complementar tu propio montaje.</p>
-          </div>
-
-          <div class="p-6 rounded-xl glass-card text-center service-card hover:bg-white/5 transition duration-300">
-            <i class="fas fa-utensils text-5xl text-secondary service-icon mb-4"></i>
-            <h3 class="text-xl font-bold mb-2 text-secondary">Mantelería & Vajilla</h3>
-            <p class="text-gray-200">Alquiler de manteles, cubre-manteles, caminos de mesa, platos, copas y cubiertos,
-              listos para vestir tus mesas con elegancia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ¿Por qué elegirnos? -->
-    <section id="why-us" class="py-16 md:py-24 bg-primary">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 text-white">¿Por qué <span class="text-secondary">Gaby Garzón Events</span>?</h2>
-        <p class="text-center text-gray-100 mb-12 max-w-2xl mx-auto">
-          Nos encargamos de cada detalle para que tú solo te preocupes por disfrutar.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-secondary/50 transition duration-300 text-center">
-            <i class="fas fa-brush text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold text-primary mb-2">Diseño Personalizado</h3>
-            <p class="text-gray-700">Cada evento se diseña a tu gusto, con colores, estilos y detalles únicos para ti.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-secondary/50 transition duration-300 text-center">
-            <i class="fas fa-users text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold text-primary mb-2">Acompañamiento Completo</h3>
-            <p class="text-gray-700">Te guiamos desde la idea inicial hasta el último invitado, para que todo fluya perfecto.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-secondary/50 transition duration-300 text-center">
-            <i class="fas fa-clock text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold text-primary mb-2">Puntualidad & Orden</h3>
-            <p class="text-gray-700">Montajes a tiempo, coordinación clara y equipo comprometido con tu tranquilidad.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-secondary/50 transition duration-300 text-center">
-            <i class="fas fa-star text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold text-primary mb-2">Detalles que Enamoran</h3>
-            <p class="text-gray-700">Pequeños detalles que hacen que tus invitados digan: “¡Qué lindo estuvo todo!”.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cotizar -->
-    <section id="cotizar" class="py-16 md:py-24 bg-[#120e1a] party-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4">Solicita tu <span class="text-secondary">Cotización</span></h2>
-        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-          Cuéntanos sobre tu evento y te enviaremos una propuesta personalizada por WhatsApp.
-        </p>
-
-        <form id="quote-form" class="max-w-3xl mx-auto p-8 rounded-xl glass-card">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <input type="text" id="nombre" placeholder="Nombre completo" required class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-            <input type="tel" id="telefono" placeholder="Teléfono (+593...)" required class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <select id="tipo_evento" required class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-              <option value="" disabled selected class="text-gray-400">Tipo de evento*</option>
-              <option value="Cumpleaños infantil">Cumpleaños infantil</option>
-              <option value="Cumpleaños adulto">Cumpleaños adulto</option>
-              <option value="Baby shower / Revelación">Baby shower / Revelación</option>
-              <option value="Boda / Aniversario">Boda / Aniversario</option>
-              <option value="Evento corporativo">Evento corporativo</option>
-              <option value="Primera comunión / Bautizo">Primera comunión / Bautizo</option>
-              <option value="Otro evento especial">Otro evento especial</option>
-            </select>
-            <input type="text" id="fecha_evento" placeholder="Fecha aproximada del evento" class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <input type="number" id="invitados" placeholder="Número aproximado de invitados" class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-            <select id="servicio" class="w-full p-3 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white">
-              <option value="" disabled selected class="text-gray-400">¿Qué necesitas?</option>
-              <option value="Decoración completa">Decoración completa</option>
-              <option value="Solo decoración de mesa principal">Solo mesa principal</option>
-              <option value="Alquiler de salón">Alquiler de salón</option>
-              <option value="Alquiler de estanterías / estructuras">Alquiler de estanterías / estructuras</option>
-              <option value="Alquiler de mantelería y vajilla">Alquiler de mantelería y vajilla</option>
-              <option value="Paquete completo (decoración + salón)">Paquete completo (decoración + salón)</option>
-            </select>
-          </div>
-
-          <textarea id="descripcion" rows="4" placeholder="Cuéntanos la temática, colores, lugar del evento y cualquier detalle importante..." required class="w-full p-3 mb-6 bg-white/5 border border-gray-700 rounded-lg focus:border-secondary focus:ring focus:ring-secondary/50 text-white"></textarea>
-
-          <button type="submit" class="w-full bg-secondary text-black px-6 py-3 rounded-full text-xl font-bold transition duration-300 btn-hover-secondary flex items-center justify-center shadow-lg">
-            <i class="fab fa-whatsapp text-2xl mr-3"></i> Enviar Cotización por WhatsApp
-          </button>
-          <p class="text-center text-sm text-gray-400 mt-4">
-            *Al hacer clic, se abrirá WhatsApp con los datos del formulario listos para enviar.
+    <!-- HERO: layout diferente, split + card lateral -->
+    <section id="hero" class="pt-10 md:pt-16 pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10 items-center">
+        <!-- Texto principal -->
+        <div>
+          <p class="chip inline-flex items-center px-3 py-1 mb-5 text-[0.7rem] uppercase tracking-[0.25em] text-rose-100">
+            Experiencias cuidadosamente diseñadas
           </p>
-        </form>
-      </div>
-    </section>
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] leading-tight text-ivory mb-4">
+            Eventos que se sienten
+            <span class="bg-gradient-to-r from-rose-200 via-rose-400 to-amber-300 bg-clip-text text-transparent">
+              delicados, sofisticados
+            </span>
+            y absolutamente tuyos.
+          </h1>
+          <p class="text-sm sm:text-base md:text-lg text-slate-200/90 max-w-xl mb-6">
+            Gaby Garzón Events combina diseño floral, ambientación, mantelería, vajilla y salón propio
+            para hasta <span class="font-semibold text-rose-200">300 personas</span>. Cada detalle se
+            piensa para mujeres que aman la estética, la armonía y la buena organización.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mb-7">
+            <a href="#cotizar" class="btn-primary rounded-full px-6 py-3 text-sm md:text-base font-semibold flex items-center space-x-2 shadow-xl">
+              <span>Quiero cotizar mi evento</span>
+              <i class="fab fa-whatsapp text-lg"></i>
+            </a>
+            <a href="#galeria" class="btn-ghost rounded-full px-5 py-3 text-sm font-medium text-slate-100 flex items-center space-x-2">
+              <i class="fa-regular fa-circle-play text-lg"></i>
+              <span>Ver montajes reales</span>
+            </a>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-champagne-glasses text-rose-200"></i>
+              <span>Baby showers, bodas, cumpleaños y eventos corporativos</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-location-dot text-amber-300"></i>
+              <span>Shushufindi · Sucumbíos · Ecuador</span>
+            </div>
+          </div>
+        </div>
 
-    <!-- Galería -->
-    <section id="galeria" class="py-16 md:py-24 bg-[#151120]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4">Galería de <span class="text-secondary">Eventos</span></h2>
-        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-          Algunos de los montajes y decoraciones realizados por Gaby Garzón Events.
-        </p>
+        <!-- Card futurista tipo "resumen de evento" -->
+        <div class="relative">
+          <div class="absolute -top-10 -right-6 w-32 h-32 rounded-full bg-rose-400/30 blur-3xl pointer-events-none"></div>
+          <div class="absolute bottom-0 -left-8 w-40 h-40 rounded-full bg-amber-300/20 blur-3xl pointer-events-none"></div>
 
-        <!-- Cambia estas fotos por tus propias imágenes cuando desees -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 1" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 2" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 3" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 4" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 5" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/1692119/pexels-photo-1692119.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Evento 6" class="gallery-item w-full h-auto object-cover rounded-lg cursor-pointer transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-secondary/60" loading="lazy" data-img-url="https://images.pexels.com/photos/1692119/pexels-photo-1692119.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <div class="glass rounded-3xl p-5 sm:p-6 lg:p-7 relative overflow-hidden">
+            <div class="absolute right-6 top-5 text-[0.65rem] uppercase tracking-[0.22em] text-rose-100/80">
+              curated by Gaby
+            </div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-11 h-11 rounded-2xl overflow-hidden border border-white/30">
+                <img src="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Evento elegante" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <div class="font-display text-sm text-rose-50">Signature Event</div>
+                <div class="text-[0.7rem] text-slate-200/80 uppercase tracking-[0.18em]">Concepto · Montaje · Detalle</div>
+              </div>
+            </div>
+
+            <div class="space-y-3 mb-5 text-sm text-slate-100/90">
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-300">Capacidad del salón</span>
+                <span class="text-sm font-semibold text-rose-100">Hasta 300 invitados</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-300">Servicios clave</span>
+                <span class="text-sm font-semibold text-amber-200">Decoración · Mantelería · Vajilla</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-300">Estilo</span>
+                <span class="text-sm font-semibold text-rose-100">Romántico · Minimal chic</span>
+              </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-4 space-y-4">
+              <div class="flex items-center justify-between text-[0.7rem] uppercase tracking-[0.22em] text-slate-300">
+                <span>Tu recorrido con nosotras</span>
+              </div>
+              <div class="flex items-center justify-between text-xs text-slate-200/90">
+                <div class="flex flex-col items-center flex-1">
+                  <span class="timeline-dot mb-2"></span>
+                  <span>Consulta</span>
+                </div>
+                <div class="h-[2px] w-8 sm:w-10 bg-gradient-to-r from-rose-300/70 to-rose-100/10"></div>
+                <div class="flex flex-col items-center flex-1">
+                  <span class="timeline-dot mb-2"></span>
+                  <span>Diseño</span>
+                </div>
+                <div class="h-[2px] w-8 sm:w-10 bg-gradient-to-r from-rose-100/10 to-amber-200/70"></div>
+                <div class="flex flex-col items-center flex-1">
+                  <span class="timeline-dot mb-2"></span>
+                  <span>Montaje</span>
+                </div>
+                <div class="h-[2px] w-8 sm:w-10 bg-gradient-to-r from-amber-200/70 to-emerald-200/40"></div>
+                <div class="flex flex-col items-center flex-1">
+                  <span class="timeline-dot mb-2"></span>
+                  <span>Celebración</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Modal Galería -->
+    <!-- EXPERIENCIAS: estructura distinta, en filas dobles -->
+    <section id="experiencias" class="pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+          <div>
+            <h2 class="font-display text-2xl sm:text-3xl text-ivory mb-2">
+              Experiencias diseñadas para distintos capítulos de tu vida
+            </h2>
+            <p class="text-sm md:text-base text-slate-200/90 max-w-xl">
+              Desde cumpleaños íntimos hasta recepciones completas con protocolo, cada tipo de evento
+              tiene su propio lenguaje visual, y lo hablamos con fluidez.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[0.7rem] uppercase tracking-[0.2em] text-rose-100">
+            <span class="chip px-3 py-1">Cumpleaños</span>
+            <span class="chip px-3 py-1">Baby shower</span>
+            <span class="chip px-3 py-1">Bodas</span>
+            <span class="chip px-3 py-1">Corporativos</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+          <article class="service-card p-6 flex flex-col space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="service-icon">
+                <i class="fa-solid fa-cake-candles"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-rose-100 text-lg">Cumpleaños & Fiestas Temáticas</h3>
+                <p class="text-xs text-slate-300 uppercase tracking-[0.18em]">Infantiles & adultos</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-100/90">
+              Creamos atmósferas que cuentan quién eres: desde fiestas de princesas hasta cenas
+              minimalistas con velas y flores frescas. Pensamos en la mesa principal, backdrop,
+              globos orgánicos, menús y rincones fotogénicos.
+            </p>
+            <ul class="mt-1 space-y-1 text-xs text-slate-200/80">
+              <li>· Mesa principal estilizada</li>
+              <li>· Estaciones de dulces y postres</li>
+              <li>· Detalles personalizados con tu nombre o iniciales</li>
+            </ul>
+          </article>
+
+          <article class="service-card p-6 flex flex-col space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="service-icon">
+                <i class="fa-solid fa-baby"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-rose-100 text-lg">Baby Showers & Revelaciones</h3>
+                <p class="text-xs text-slate-300 uppercase tracking-[0.18em]">Dulce espera</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-100/90">
+              Paletas suaves, texturas delicadas y detalles pensados para fotos memorables. Podemos
+              integrar juegos, estación de deseos para el bebé y área especial para los futuros papás.
+            </p>
+            <ul class="mt-1 space-y-1 text-xs text-slate-200/80">
+              <li>· Decoración temática completa</li>
+              <li>· Arcos orgánicos de globos y flores</li>
+              <li>· Mesas dulces, cajas sorpresa y photocall</li>
+            </ul>
+          </article>
+
+          <article class="service-card p-6 flex flex-col space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="service-icon">
+                <i class="fa-solid fa-ring"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-rose-100 text-lg">Bodas, Aniversarios & Momentos Sí</h3>
+                <p class="text-xs text-slate-300 uppercase tracking-[0.18em]">Grande o íntimo</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-100/90">
+              Creamos escenarios para promesas importantes: mesa de novios, caminos florales, rincones
+              de fotos y ambientación acorde al tipo de ceremonia o recepción.
+            </p>
+            <ul class="mt-1 space-y-1 text-xs text-slate-200/80">
+              <li>· Mesa principal y mesas de invitados</li>
+              <li>· Iluminación cálida y romanticismo visual</li>
+              <li>· Detalles personalizados y seating plan</li>
+            </ul>
+          </article>
+
+          <article class="service-card p-6 flex flex-col space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="service-icon">
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-rose-100 text-lg">Eventos Corporativos con Estilo</h3>
+                <p class="text-xs text-slate-300 uppercase tracking-[0.18em]">Imagen & marca</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-100/90">
+              Montajes sobrios y elegantes para lanzamientos, conferencias, reconocimientos y cenas
+              de empresa. Coordinamos colores con tu marca y cuidamos el protocolo visual.
+            </p>
+            <ul class="mt-1 space-y-1 text-xs text-slate-200/80">
+              <li>· Escenarios, backing y branding</li>
+              <li>· Mesas de invitados, presidium e ingreso</li>
+              <li>· Decoración en armonía con tu identidad visual</li>
+            </ul>
+          </article>
+
+          <article class="service-card p-6 flex flex-col space-y-4 md:col-span-2 xl:col-span-2">
+            <div class="flex items-center space-x-3">
+              <div class="service-icon">
+                <i class="fa-solid fa-cross"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-rose-100 text-lg">Bautizos, Primeras Comuniones & Momentos de Fe</h3>
+                <p class="text-xs text-slate-300 uppercase tracking-[0.18em]">Pulcro & luminoso</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-100/90">
+              Paletas en blanco, dorado y tonos suaves que transmiten paz y pureza. Ornamentos delicados,
+              velas, detalles religiosos y una mesa principal que honra ese día especial.
+            </p>
+            <ul class="mt-1 space-y-1 text-xs text-slate-200/80 grid grid-cols-1 sm:grid-cols-2 gap-y-1">
+              <li>· Decoración de mesa principal y mesa de recuerdos</li>
+              <li>· Flores, velas y símbolos de fe integrados con buen gusto</li>
+              <li>· Opciones de mantelería y vajilla en tonos neutros</li>
+              <li>· Rincón para fotografías familiares</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SALÓN & ALQUILER – layout en espejo -->
+    <section id="salon" class="pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <!-- Collage visual -->
+        <div class="relative order-2 lg:order-1">
+          <div class="absolute -top-6 -left-4 w-32 h-32 rounded-full bg-rose-400/25 blur-3xl"></div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-amber-300/20 blur-3xl"></div>
+
+          <div class="grid grid-cols-2 gap-4 relative">
+            <div class="space-y-4">
+              <div class="overflow-hidden rounded-3xl border border-white/15 shadow-xl">
+                <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Salón para eventos"
+                     class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </div>
+              <div class="overflow-hidden rounded-3xl border border-white/12 shadow-lg">
+                <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Montaje de mesa"
+                     class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </div>
+            </div>
+            <div class="space-y-4 translate-y-6">
+              <div class="overflow-hidden rounded-3xl border border-white/15 shadow-xl">
+                <img src="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     alt="Decoración de boda"
+                     class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </div>
+              <div class="glass rounded-3xl px-4 py-5 text-xs text-slate-100/90">
+                <div class="font-display text-sm text-rose-100 mb-1">Salón & Alquiler Premium</div>
+                <p>Un espacio versátil para 300 personas, más un catálogo de mantelería, vajilla y
+                estanterías que elevan cualquier evento a categoría editorial.</p>
+                <div class="mt-3 flex items-center text-[0.7rem] text-rose-100/90 gap-3">
+                  <span class="chip px-2 py-1">300 personas</span>
+                  <span class="chip px-2 py-1">Mantelería & Vajilla</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto y bullets -->
+        <div class="order-1 lg:order-2">
+          <h2 class="font-display text-2xl sm:text-3xl text-ivory mb-3">
+            El salón, la mantelería, la vajilla y las estanterías en un mismo lugar.
+          </h2>
+          <p class="text-sm md:text-base text-slate-200/90 mb-5 max-w-lg">
+            No tienes que coordinar diez proveedores. Contamos con un salón amplio, mobiliario y un
+            catálogo de alquiler que se adapta a distintos estilos: clásico, romántico, moderno,
+            minimalista o temático.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5 text-sm text-slate-100/90">
+            <div class="glass rounded-2xl p-4 space-y-2">
+              <div class="flex items-center space-x-2 text-rose-100">
+                <i class="fa-solid fa-warehouse text-rose-200"></i>
+                <span class="font-semibold text-sm">Salón para 300 personas</span>
+              </div>
+              <p class="text-xs text-slate-200/90">
+                Distribución flexible para escenario, pista de baile, mesas rectangulares o redondas,
+                zona infantil y fotografías.
+              </p>
+            </div>
+            <div class="glass rounded-2xl p-4 space-y-2">
+              <div class="flex items-center space-x-2 text-amber-100">
+                <i class="fa-solid fa-table text-amber-200"></i>
+                <span class="font-semibold text-sm">Mantelería de alto impacto</span>
+              </div>
+              <p class="text-xs text-slate-200/90">
+                Manteles, cubremanteles, caminos y servilletas en tonos neutros y de acento para lograr
+                mesas elegantes y fotogénicas.
+              </p>
+            </div>
+            <div class="glass rounded-2xl p-4 space-y-2">
+              <div class="flex items-center space-x-2 text-rose-100">
+                <i class="fa-solid fa-utensils text-rose-200"></i>
+                <span class="font-semibold text-sm">Vajilla & cristalería</span>
+              </div>
+              <p class="text-xs text-slate-200/90">
+                Platos, copas, cubiertos y complementos seleccionados para que tu mesa se vea impecable,
+                sin mezclas improvisadas.
+              </p>
+            </div>
+            <div class="glass rounded-2xl p-4 space-y-2">
+              <div class="flex items-center space-x-2 text-amber-100">
+                <i class="fa-solid fa-shelves text-amber-200"></i>
+                <span class="font-semibold text-sm">Estanterías & estructuras</span>
+              </div>
+              <p class="text-xs text-slate-200/90">
+                Fondos, bases, columnas y estanterías decorativas que sirven como soporte para dulces,
+                recuerdos y arreglos florales.
+              </p>
+            </div>
+          </div>
+
+          <a href="#cotizar" class="inline-flex items-center space-x-2 text-rose-100 text-sm hover:text-amber-200 transition">
+            <span>Cuéntanos qué necesitas alquilar</span>
+            <i class="fa-solid fa-arrow-right-long text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZAR: layout split (texto + formulario) -->
+    <section id="cotizar" class="pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass rounded-3xl p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-8 lg:gap-10">
+          <!-- copy -->
+          <div class="space-y-5">
+            <p class="chip px-3 py-1 inline-block text-[0.7rem] uppercase tracking-[0.24em] text-rose-100">
+              Cotización curada para ti
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-ivory">
+              Un formulario delicado, una propuesta a tu altura.
+            </h2>
+            <p class="text-sm md:text-base text-slate-200/90">
+              Llena estos datos y recibirás la cotización directamente en WhatsApp. Así podrás hacer
+              ajustes, enviar referencias y coordinar detalles sin perder tiempo.
+            </p>
+            <ul class="text-xs md:text-sm text-slate-200/90 space-y-2">
+              <li class="flex items-start space-x-2">
+                <span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-rose-300"></span>
+                <span>Perfecto para reservar fecha, pedir un paquete completo o solo alquiler de salón,
+                mantelería y vajilla.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-amber-300"></span>
+                <span>Mientras más detalles nos des (tema, colores, invitados), más precisa será la
+                propuesta.</span>
+              </li>
+            </ul>
+
+            <div class="text-[0.7rem] text-slate-300 uppercase tracking-[0.2em] flex flex-wrap gap-3 pt-2">
+              <span class="chip px-3 py-1">Respuestas por WhatsApp</span>
+              <span class="chip px-3 py-1">Atención personalizada</span>
+            </div>
+          </div>
+
+          <!-- formulario -->
+          <form id="quote-form" class="bg-black/25 rounded-2xl p-4 sm:p-5 lg:p-6 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <input type="text" id="nombre" placeholder="Nombre completo*" required
+                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+              <input type="tel" id="telefono" placeholder="WhatsApp (+593...)*" required
+                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <select id="tipo_evento" required
+                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+                <option value="" disabled selected>Tipo de evento*</option>
+                <option value="Cumpleaños infantil">Cumpleaños infantil</option>
+                <option value="Cumpleaños adulto">Cumpleaños adulto</option>
+                <option value="Baby shower / Revelación">Baby shower / Revelación</option>
+                <option value="Boda / Aniversario">Boda / Aniversario</option>
+                <option value="Evento corporativo">Evento corporativo</option>
+                <option value="Primera comunión / Bautizo">Primera comunión / Bautizo</option>
+                <option value="Otro evento especial">Otro evento especial</option>
+              </select>
+              <input type="text" id="fecha_evento" placeholder="Fecha aproximada del evento"
+                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <input type="number" id="invitados" placeholder="Número aproximado de invitados"
+                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+              <select id="servicio"
+                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent">
+                <option value="" disabled selected>¿Qué necesitas?</option>
+                <option value="Decoración completa">Decoración completa</option>
+                <option value="Solo mesa principal">Solo mesa principal</option>
+                <option value="Alquiler de salón">Alquiler de salón</option>
+                <option value="Alquiler de estanterías / estructuras">Estanterías / estructuras</option>
+                <option value="Alquiler de mantelería y vajilla">Mantelería y vajilla</option>
+                <option value="Paquete completo (decoración + salón)">Paquete completo (decoración + salón)</option>
+              </select>
+            </div>
+
+            <textarea id="descripcion" rows="4"
+                      placeholder="Cuéntanos la temática, colores, ciudad, horario y cualquier detalle importante..."
+                      required
+                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/15 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-300/70 focus:border-transparent"></textarea>
+
+            <button type="submit"
+                    class="w-full btn-primary rounded-full py-3 text-sm md:text-base font-semibold flex items-center justify-center space-x-2">
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span>Enviar cotización por WhatsApp</span>
+            </button>
+            <p class="text-[0.7rem] text-slate-300 text-center">
+              *Al hacer clic se abrirá WhatsApp con el resumen listo para enviar a Gaby Garzón Events.*
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA: distinta estructura, más tipo grid editorial -->
+    <section id="galeria" class="pb-16 md:pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+          <div>
+            <h2 class="font-display text-2xl sm:text-3xl text-ivory mb-2">Un vistazo a nuestros montajes</h2>
+            <p class="text-sm md:text-base text-slate-200/90 max-w-xl">
+              Cada evento es distinto, pero todos comparten algo: el cariño por el detalle y una estética
+              pensada para verse bien en persona y en fotos.
+            </p>
+          </div>
+          <div class="text-xs text-slate-300">
+            Desliza sobre las imágenes y haz clic para verlas en grande.
+          </div>
+        </div>
+
+        <!-- Cambia por tus fotos reales cuando quieras -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 1"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 2"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 3"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <img src="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 4"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <img src="https://images.pexels.com/photos/2253876/pexels-photo-2253876.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 5"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/2253876/pexels-photo-2253876.jpeg?auto=compress&cs=tinysrgb&w=1600">
+          <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Evento 6"
+               class="gallery-item w-full h-auto object-cover rounded-2xl cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-rose-400/40 transition duration-300"
+               loading="lazy"
+               data-img-url="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL GALERÍA -->
     <div id="gallery-modal" class="fixed inset-0 flex items-center justify-center p-4" onclick="closeModal()">
       <div id="modal-content-wrapper" class="relative" onclick="event.stopPropagation()">
         <button id="modal-prev" class="modal-arrow">
           <i class="fas fa-chevron-left"></i>
         </button>
 
-        <img id="modal-image" src="" alt="Evento en detalle" class="rounded-xl">
+        <img id="modal-image" src="" alt="Evento en detalle">
 
         <button id="modal-next" class="modal-arrow">
           <i class="fas fa-chevron-right"></i>
         </button>
 
-        <button class="absolute top-4 right-4 text-white text-3xl hover:text-secondary transition duration-300" onclick="closeModal()">
+        <button class="absolute -top-3 -right-3 text-white text-2xl bg-black/70 rounded-full w-9 h-9 flex items-center justify-center hover:bg-rose-400 hover:text-ink transition"
+                onclick="closeModal()">
           <i class="fas fa-times"></i>
         </button>
       </div>
     </div>
 
-    <!-- Video tipo teléfono -->
-    <section id="video" class="py-16 md:py-24 party-bg">
+    <!-- VIDEO TIPO TELÉFONO -->
+    <section id="video" class="pb-16 md:pb-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
-          Mira cómo <span class="text-secondary">transformamos</span> los espacios
+        <h2 class="font-display text-2xl sm:text-3xl text-ivory mb-3">
+          Observa cómo un espacio se transforma en celebración.
         </h2>
-        <p class="text-center text-gray-200 mb-12 max-w-2xl mx-auto">
-          Un vistazo a los montajes, detalles y ambiente que creamos en cada evento.
+        <p class="text-sm md:text-base text-slate-200/90 max-w-2xl mx-auto mb-8">
+          Un pequeño vistazo a algunos montajes y detalles. Reemplaza este video por uno tuyo cuando lo tengas listo.
         </p>
 
-        <!-- Cambia el enlace de YouTube por tu video -->
-        <div class="relative mx-auto w-[260px] sm:w-[300px] md:w-[340px] rounded-[2rem] border-[12px] border-black shadow-[0_0_30px_rgba(255,175,63,0.5)] overflow-hidden bg-black">
+        <div class="relative mx-auto w-[260px] sm:w-[300px] md:w-[340px] rounded-[2rem] border-[11px] border-black/90 shadow-[0_0_40px_rgba(227,154,187,0.6)] overflow-hidden bg-black">
           <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-700 rounded-full z-10"></div>
           <iframe 
             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1&playsinline=1"
             class="w-full aspect-[9/16] rounded-[1.8rem] border-none"
-            title="Gaby Garzón Events - Decoraciones"
+            title="Gaby Garzón Events - Video de eventos"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
           </iframe>
         </div>
 
-        <p class="text-gray-400 text-sm mt-6 italic">
-          *Reemplaza este video por uno de tus eventos reales.*
+        <p class="text-[0.7rem] text-slate-400 mt-4 italic">
+          *Cuando tengas tu video real, solo cambia el enlace de YouTube en el código.*
         </p>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-16 md:py-24 bg-[#100c18]">
+    <section id="faq" class="pb-16 md:pb-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4">Preguntas <span class="text-secondary">Frecuentes</span></h2>
-        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-          Resolvemos algunas dudas antes de que nos escribas.
-        </p>
-
-        <div class="max-w-3xl mx-auto space-y-4">
-          <div class="glass-card rounded-lg overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left text-lg hover:bg-white/10 transition duration-300">
-              <span>¿Con cuánta anticipación debo reservar mi evento?</span>
-              <i class="fas fa-chevron-down transform transition duration-300"></i>
-            </button>
-            <div class="faq-content hidden p-5 pt-0 text-gray-200 border-t border-gray-700">
-              <p>Lo ideal es reservar con al menos 1 mes de anticipación. Para fechas especiales (diciembre, Día del Niño, Día de la Madre, etc.) recomendamos reservar con más tiempo, ya que la agenda se llena rápido.</p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-lg overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left text-lg hover:bg-white/10 transition duration-300">
-              <span>¿Pueden decorar en mi domicilio o solo en su salón?</span>
-              <i class="fas fa-chevron-down transform transition duration-300"></i>
-            </button>
-            <div class="faq-content hidden p-5 pt-0 text-gray-200 border-t border-gray-700">
-              <p>Podemos decorar tanto en nuestro salón para 300 personas como en tu domicilio, local o lugar del evento, siempre que se coordine con anticipación la dirección y condiciones del espacio.</p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-lg overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left text-lg hover:bg-white/10 transition duration-300">
-              <span>¿El alquiler de mantelería y vajilla incluye lavado?</span>
-              <i class="fas fa-chevron-down transform transition duration-300"></i>
-            </button>
-            <div class="faq-content hidden p-5 pt-0 text-gray-200 border-t border-gray-700">
-              <p>Sí, nuestros paquetes de alquiler de mantelería y vajilla incluyen el servicio de lavado. Solo solicitamos que los elementos sean devueltos completos y en buen estado.</p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-lg overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left text-lg hover:bg-white/10 transition duration-300">
-              <span>¿Realizan paquetes completos (decoración + salón + mesa de dulces)?</span>
-              <i class="fas fa-chevron-down transform transition duration-300"></i>
-            </button>
-            <div class="faq-content hidden p-5 pt-0 text-gray-200 border-t border-gray-700">
-              <p>Sí, contamos con paquetes integrales donde incluimos decoración, uso del salón, montaje de mesas, mantelería, vajilla y mesa de dulces según tu presupuesto.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-16 md:py-24 bg-primary party-bg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 text-white">Hablemos de tu <span class="text-secondary">Evento</span></h2>
-        <p class="text-center text-gray-100 mb-12 max-w-2xl mx-auto">
-          Escríbenos y planificamos juntos la celebración que tienes en mente.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
-          <div class="p-6 rounded-xl bg-primary/70 glass-card">
-            <i class="fas fa-map-marker-alt text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold mb-2 text-white">Ubicación</h3>
-            <p class="text-gray-100">
-              Shushufindi, Provincia de Sucumbíos, Ecuador.
-              <br>Salón para eventos hasta 300 personas.
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
+          <div class="max-w-xl">
+            <h2 class="font-display text-2xl sm:text-3xl text-ivory mb-3">Preguntas frecuentes</h2>
+            <p class="text-sm md:text-base text-slate-200/90">
+              Si algo te resuena aquí, perfecto. Si no, puedes escribirnos y lo resolvemos juntas
+              directamente por WhatsApp.
             </p>
           </div>
+        </div>
 
-          <div class="p-6 rounded-xl bg-primary/70 glass-card">
-            <i class="fas fa-phone text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold mb-2 text-white">WhatsApp / Llamadas</h3>
-            <!-- CAMBIA ESTE NÚMERO SI USA OTRO PARA EVENTOS -->
-            <a href="tel:+593969881264" class="text-gray-100 hover:text-secondary transition block">Llamar ahora</a>
-            <span class="text-gray-100 block">+593 96 988 1264</span>
+        <div class="max-w-3xl space-y-4">
+          <div class="glass rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-ivory">
+              <span>¿Con cuánta anticipación debo reservar mi fecha?</span>
+              <i class="fas fa-chevron-down text-rose-200 text-sm transition"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-200 border-t border-white/10">
+              <p>
+                Lo ideal es mínimo un mes antes, pero para fechas especiales (diciembre, Día de la Madre,
+                Día del Niño, etc.) te recomendamos separar fecha con más tiempo porque la agenda se llena
+                muy rápido.
+              </p>
+            </div>
           </div>
 
-          <div class="p-6 rounded-xl bg-primary/70 glass-card">
-            <i class="fas fa-envelope text-4xl text-secondary mb-3"></i>
-            <h3 class="text-xl font-bold mb-2 text-white">Correo & Redes</h3>
-            <a href="mailto:gabygarzondecoraciones@example.com" class="text-gray-100 hover:text-secondary transition block">
-              gabygarzondecoraciones@example.com
-            </a>
-            <div class="mt-3 space-x-4">
-              <a href="#" class="text-2xl text-white hover:text-secondary transition"><i class="fab fa-facebook-square"></i></a>
-              <a href="#" class="text-2xl text-white hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+          <div class="glass rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-ivory">
+              <span>¿Pueden decorar en otro lugar que no sea su salón?</span>
+              <i class="fas fa-chevron-down text-rose-200 text-sm transition"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-200 border-t border-white/10">
+              <p>
+                Sí. Podemos llevar la decoración a tu domicilio, quinta, local o espacio de eventos. Solo
+                necesitamos la dirección y algunas fotos o medidas del lugar para diseñar de forma segura.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-ivory">
+              <span>¿El alquiler de mantelería y vajilla incluye lavado?</span>
+              <i class="fas fa-chevron-down text-rose-200 text-sm transition"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-200 border-t border-white/10">
+              <p>
+                Sí. Todo nuestro servicio de mantelería y vajilla incluye lavado posterior. Solo pedimos
+                que lo devuelvas completo, sin restos de comida excesiva y en el tiempo acordado.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl overflow-hidden">
+            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-ivory">
+              <span>¿Tienen paquetes completos (decoración + salón + mesa de dulces)?</span>
+              <i class="fas fa-chevron-down text-rose-200 text-sm transition"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-200 border-t border-white/10">
+              <p>
+                Sí. Podemos armar paquetes integrales según tu presupuesto e incluir decoración completa,
+                uso del salón, mesa de dulces, mantelería y vajilla. En la cotización podemos sugerirte
+                opciones según el tipo de evento.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="pb-14 md:pb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-t border-white/10 pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-8">
+          <div class="space-y-4">
+            <h2 class="font-display text-xl sm:text-2xl text-ivory">Hablemos de tu evento.</h2>
+            <p class="text-sm md:text-base text-slate-200/90 max-w-lg">
+              Escríbenos directamente y conversemos sobre fecha, estilo y presupuesto. Todo empieza con
+              un mensaje.
+            </p>
+            <div class="space-y-3 text-sm text-slate-200/90">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-location-dot text-rose-200"></i>
+                <span>Shushufindi, Provincia de Sucumbíos, Ecuador.</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-whatsapp text-emerald-300"></i>
+                <div>
+                  <!-- CAMBIA ESTE NÚMERO SI USAS OTRO PARA EVENTOS -->
+                  <a href="https://wa.me/593969881264" target="_blank" class="hover:text-rose-200">
+                    +593 96 988 1264
+                  </a>
+                  <div class="text-xs text-slate-300">WhatsApp & llamadas</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-envelope text-amber-200"></i>
+                <a href="mailto:gabygarzon.events@example.com" class="hover:text-rose-200">
+                  gabygarzon.events@example.com
+                </a>
+              </div>
+              <div class="flex items-center space-x-4 pt-1">
+                <a href="#" class="text-xl text-slate-100 hover:text-rose-200"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="text-xl text-slate-100 hover:text-rose-200"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl p-4 sm:p-5 text-xs text-slate-200/90">
+            <div class="font-display text-sm text-rose-100 mb-2">Notas de estilo para tu evento</div>
+            <p>
+              ¿No sabes por dónde empezar? Juntas podemos definir una paleta de color, un estilo de
+              mantelería, el tipo de vajilla y el lenguaje visual de toda la decoración.
+            </p>
+            <p class="mt-3">
+              Puedes enviarnos referencias desde Pinterest, Instagram o fotos de otros eventos que te
+              gustaron. A partir de ahí, creamos algo único para ti.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-black py-8 border-t-4 border-secondary/60 shadow-inner">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-      <p class="mb-2">&copy; 2024 Gaby Garzón Events. Todos los derechos reservados.</p>
-      <p class="text-xs">Decoración de fiestas, alquiler de salón, estanterías, mantelería y vajilla para eventos inolvidables.</p>
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-6 text-center text-[0.75rem] text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      &copy; 2024 Gaby Garzón Events · Diseño y producción de eventos con amor y detalle.
     </div>
   </footer>
 
-  <!-- Botón Flotante WhatsApp -->
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
   <a id="float-whatsapp-btn"
-     href="https://wa.me/593969881264?text=%C2%A1Hola%20Gaby!%20%F0%9F%8E%89%20Vi%20tu%20p%C3%A1gina%20web%20y%20quiero%20informaci%C3%B3n%20para%20organizar%20un%20evento."
+     href="https://wa.me/593969881264?text=%C2%A1Hola%20Gaby!%20%F0%9F%8E%89%20Acabo%20de%20ver%20tu%20web%20y%20quiero%20informaci%C3%B3n%20para%20un%20evento."
      target="_blank"
-     class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl transition duration-300 hover:bg-[#1ebe5d] hover:scale-110">
+     class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-xl transition duration-300 hover:bg-[#1ebe5d] hover:scale-110">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- =============== JS PRINCIPAL =============== -->
+  <!-- JS PRINCIPAL -->
   <script>
-    // CAMBIA ESTE NÚMERO SI USA OTRO PARA EVENTOS
+    // CAMBIA ESTE NÚMERO SI USAS OTRO PARA EVENTOS
     const WHATSAPP_NUMBER = '593969881264';
 
     /* === Menú móvil === */
@@ -585,40 +958,45 @@
     function closeMobileMenu(){
       if(!mobileMenu.classList.contains('hidden')) toggleMobileMenu();
     }
-    menuToggle.addEventListener('click', toggleMobileMenu, { passive:true });
+    if(menuToggle){
+      menuToggle.addEventListener('click', toggleMobileMenu, { passive:true });
+    }
 
     /* === Formulario → WhatsApp === */
-    document.getElementById('quote-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      const nombre   = document.getElementById('nombre').value;
-      const telefono = document.getElementById('telefono').value;
-      const tipo_evento = document.getElementById('tipo_evento').value;
-      const fecha_evento = document.getElementById('fecha_evento').value;
-      const invitados = document.getElementById('invitados').value;
-      const servicio = document.getElementById('servicio').value;
-      const descripcion = document.getElementById('descripcion').value;
+    const quoteForm = document.getElementById('quote-form');
+    if(quoteForm){
+      quoteForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const nombre   = document.getElementById('nombre').value;
+        const telefono = document.getElementById('telefono').value;
+        const tipo_evento = document.getElementById('tipo_evento').value;
+        const fecha_evento = document.getElementById('fecha_evento').value;
+        const invitados = document.getElementById('invitados').value;
+        const servicio = document.getElementById('servicio').value;
+        const descripcion = document.getElementById('descripcion').value;
 
-      const quoteMessage =
-`*COTIZACIÓN DE EVENTO - Gaby Garzón Events* 🎉
+        const quoteMessage =
+`*COTIZACIÓN DE EVENTO - Gaby Garzón Events* ✨
 
 *Datos del cliente:*
 Nombre: ${nombre}
-Teléfono: ${telefono}
+WhatsApp: ${telefono}
 
 *Evento:*
 Tipo de evento: ${tipo_evento}
-Fecha aproximada: ${fecha_evento || 'Sin definir'}
-Número de invitados: ${invitados || 'Sin especificar'}
+Fecha aproximada: ${fecha_evento || 'Por definir'}
+Número de invitados: ${invitados || 'Por definir'}
 Servicio requerido: ${servicio || 'Por definir'}
 
 *Detalles del evento:*
 ${descripcion}
 
-Te escribo desde la página web y me gustaría recibir una cotización para este evento. ¡Gracias! ✨`;
+Te escribo desde la página web y me gustaría recibir una propuesta y cotización. 💕`;
 
-      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteMessage)}`;
-      window.open(waUrl, '_blank');
-    }, { passive:true });
+        const waUrl = \`https://wa.me/\${WHATSAPP_NUMBER}?text=\${encodeURIComponent(quoteMessage)}\`;
+        window.open(waUrl, '_blank');
+      }, { passive:true });
+    }
 
     /* === Modal Galería con navegación === */
     const modal = document.getElementById('gallery-modal');
@@ -652,8 +1030,8 @@ Te escribo desde la página web y me gustaría recibir una cotización para este
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       setTimeout(()=>{
-        modalWrapper.style.transform = 'rotateY(10deg)';
-        modalImage.style.transform = 'rotateY(-10deg)';
+        modalWrapper.style.transform = 'rotateY(8deg)';
+        modalImage.style.transform = 'rotateY(-8deg)';
       },50);
     }
 
@@ -663,7 +1041,7 @@ Te escribo desde la página web y me gustaría recibir una cotización para este
       setTimeout(()=>{
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-      },500);
+      },250);
     }
 
     function showNext(){
@@ -673,17 +1051,20 @@ Te escribo desde la página web y me gustaría recibir una cotización para este
       showImage(currentIndex - 1);
     }
 
-    prevBtn.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      showPrev();
-    });
+    if(prevBtn){
+      prevBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        showPrev();
+      });
+    }
+    if(nextBtn){
+      nextBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        showNext();
+      });
+    }
 
-    nextBtn.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      showNext();
-    });
-
-    // Swipe en pantallas táctiles
+    // Swipe en móviles
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -702,10 +1083,11 @@ Te escribo desde la página web y me gustaría recibir una cotización para este
       }
     }
 
-    modalImage.addEventListener('touchstart', handleTouchStart, { passive:true });
-    modalImage.addEventListener('touchend', handleTouchEnd, { passive:true });
+    if(modalImage){
+      modalImage.addEventListener('touchstart', handleTouchStart, { passive:true });
+      modalImage.addEventListener('touchend', handleTouchEnd, { passive:true });
+    }
 
-    // Teclado
     document.addEventListener('keydown', function(event){
       if(modal.style.display === 'flex'){
         if(event.key === 'Escape'){
@@ -745,12 +1127,14 @@ Te escribo desde la página web y me gustaría recibir una cotización para este
       }, { passive:true });
     });
 
-    /* === Pausa de animaciones mientras se desplaza === */
+    /* === Pausa animación de orbes mientras se desplaza === */
     let scrollTimer;
     window.addEventListener('scroll', ()=>{
       document.documentElement.classList.add('is-scrolling');
       clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(()=>{ document.documentElement.classList.remove('is-scrolling'); }, 120);
+      scrollTimer = setTimeout(()=>{
+        document.documentElement.classList.remove('is-scrolling');
+      }, 120);
     }, { passive:true });
   </script>
 </body>
