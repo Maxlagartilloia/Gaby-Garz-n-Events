@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaby Garzón Events | Decoración Profesional de Eventos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaby Garzón Events | Cotizador Interactivo</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Gaby Garzón Events ofrece decoración elegante y personalizada para baby showers, cumpleaños, bodas, 15 años y eventos especiales. Reserva tu fecha y cotiza al instante.">
-    <meta name="keywords" content="Gaby Garzón Events, decoración de eventos, baby shower, cumpleaños, bodas, eventos Shushufindi, decoraciones elegantes, globos, montajes">
-    <meta name="author" content="Gaby Garzón Events">
-
-    <!-- Tailwind CSS -->
+    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FUENTES -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
     <style>
@@ -24,183 +19,208 @@
         .gradient-bg {
             background: linear-gradient(135deg, #fbe9f4 0%, #fff9fc 40%, #fef3e7 100%);
         }
-        .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .card { transition: 0.2s; }
+        .card:hover { transform: translateY(-4px); }
     </style>
 </head>
 
 <body class="bg-white">
 
 <!-- HERO -->
-<section class="gradient-bg py-24 px-6 text-center">
-    <h1 class="title-font text-5xl font-bold mb-4 gold">Gaby Garzón Events</h1>
-    <p class="text-gray-700 text-lg max-w-2xl mx-auto">
-        Decoraciones elegantes y modernas para Baby Showers, Cumpleaños, Bodas, 15 Años y Eventos Especiales.
+<section class="gradient-bg py-20 px-6 text-center">
+    <h1 class="title-font text-5xl font-bold gold mb-4">Gaby Garzón Events</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto text-lg">
+        Construye tu evento soñado: elige estructuras, mobiliario, decoración, temáticas y combos listos. 
+        Mira el precio aproximado en tiempo real ✨
     </p>
-
-    <div class="mt-8 space-x-4">
-        <a href="https://wa.me/593#########?text=Hola%20quiero%20reservar%20una%20fecha%20con%20Gaby%20Garzón%20Events"
-           class="bg-gold text-white px-8 py-3 rounded-lg shadow-soft font-medium hover:opacity-90">
-           Reservar mi Fecha
-        </a>
-
-        <a href="#cotizador"
-           class="border border-gold text-gold px-8 py-3 rounded-lg shadow-soft font-medium hover:bg-gold hover:text-white transition">
-           Hacer Cotización
-        </a>
-    </div>
 </section>
 
-<!-- TEMÁTICAS -->
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Temáticas Populares</h2>
+<!-- BUILDER -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="title-font text-4xl gold text-center mb-10">Arma tu Evento</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
-        <!-- Baby Shower -->
-        <div class="bg-white rounded-xl shadow-soft p-5">
-            <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-lg mb-4">
-            <h3 class="title-font text-2xl gold mb-2">Baby Shower</h3>
-            <p class="text-gray-600 text-sm">Nube de Amor, Osito Gold, Ángel, Rosa Gold, Azul Premium.</p>
-        </div>
-
-        <!-- Cumpleaños -->
-        <div class="bg-white rounded-xl shadow-soft p-5">
-            <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-lg mb-4">
-            <h3 class="title-font text-2xl gold mb-2">Cumpleaños Infantiles</h3>
-            <p class="text-gray-600 text-sm">Selva, Princesas, Stitch, Dinosaurios, Sonic y más.</p>
-        </div>
-
-        <!-- Bodas -->
-        <div class="bg-white rounded-xl shadow-soft p-5">
-            <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-lg mb-4">
-            <h3 class="title-font text-2xl gold mb-2">Bodas & Eventos</h3>
-            <p class="text-gray-600 text-sm">Bodas minimalistas, románticas, 15 años y compromisos.</p>
-        </div>
-    </div>
-</section>
-
-<!-- COTIZADOR -->
-<section id="cotizador" class="py-20 px-6 bg-pink-50/50">
-    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Cotizador Automático</h2>
-
-    <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-soft">
-        <form id="quoteForm" class="space-y-6">
-
-            <!-- Tipo de evento -->
-            <div>
-                <label class="font-semibold text-gray-700">Tipo de Evento</label>
-                <select class="w-full border rounded-lg p-3 mt-2" id="evento">
-                    <option>Baby Shower</option>
-                    <option>Cumpleaños Infantil</option>
-                    <option>Boda</option>
-                    <option>15 Años</option>
-                    <option>Evento Corporativo</option>
-                </select>
-            </div>
-
-            <!-- Temática -->
-            <div>
-                <label class="font-semibold text-gray-700">Temática</label>
-                <input id="tematica" type="text" class="w-full border rounded-lg p-3 mt-2"
-                       placeholder="Ej: Nube de Amor, Selva, Rosa Gold">
-            </div>
-
-            <!-- Tamaño del montaje -->
-            <div>
-                <label class="font-semibold text-gray-700">Tamaño del Montaje</label>
-                <select id="tamano" class="w-full border rounded-lg p-3 mt-2">
-                    <option>Básico</option>
-                    <option>Medio</option>
-                    <option>Premium</option>
-                    <option>Deluxe</option>
-                </select>
-            </div>
-
-            <!-- Extras -->
-            <div>
-                <label class="font-semibold text-gray-700">Extras</label>
-                <div class="grid grid-cols-2 gap-3 mt-2">
-                    <label><input type="checkbox" value="Arco orgánico premium" class="extra"> Arco Premium</label>
-                    <label><input type="checkbox" value="Mesa dulce" class="extra"> Mesa Dulce</label>
-                    <label><input type="checkbox" value="Letras 3D" class="extra"> Letras 3D</label>
-                    <label><input type="checkbox" value="Photobooth" class="extra"> Photobooth</label>
-                </div>
-            </div>
-
-            <!-- Botón enviar a WhatsApp -->
-            <button type="button" onclick="sendQuote()"
-                    class="w-full bg-gold text-white py-3 rounded-lg shadow-soft text-lg font-medium hover:opacity-90">
-                Enviar Cotización por WhatsApp
-            </button>
-        </form>
-    </div>
-</section>
-
-<!-- SCRIPT COTIZADOR -->
-<script>
-function sendQuote() {
-    let evento = document.getElementById("evento").value;
-    let tematica = document.getElementById("tematica").value;
-    let tamano = document.getElementById("tamano").value;
-
-    let extras = [];
-    document.querySelectorAll(".extra:checked").forEach(e => extras.push(e.value));
-
-    let mensaje = `Hola, quiero cotizar una decoración con Gaby Garzón Events:%0A%0A` +
-                  `Evento: ${evento}%0A` +
-                  `Temática: ${tematica}%0A` +
-                  `Tamaño: ${tamano}%0A` +
-                  `Extras: ${extras.join(", ")}%0A`;
-
-    window.open(`https://wa.me/593#########?text=${mensaje}`, "_blank");
-}
-</script>
-
-<!-- GALERÍA -->
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Galería Gaby Garzón Events</h2>
-
+    <!-- GRID -->
     <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-xl shadow-soft">
-        <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-xl shadow-soft">
-        <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-xl shadow-soft">
+
+        <!-- ITEM -->
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Cilindros</h3>
+            <p class="text-gray-600 text-sm">Set de 3 cilindros</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$25</span>
+                <input type="checkbox" class="item" data-name="Cilindros" data-price="25">
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Aro Circular</h3>
+            <p class="text-gray-600 text-sm">Aro metálico decorativo</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$20</span>
+                <input type="checkbox" class="item" data-name="Aro circular" data-price="20">
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Mesa Principal</h3>
+            <p class="text-gray-600 text-sm">Mesa grande para montaje</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$15</span>
+                <input type="checkbox" class="item" data-name="Mesa principal" data-price="15">
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/MTmJM0Cz/sillas.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Sillas Tiffany</h3>
+            <p class="text-gray-600 text-sm">Sillas elegantes premium</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$10 c/u</span>
+                <input type="checkbox" class="item" data-name="Sillas Tiffany" data-price="10">
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/sgRkbq0c/carpas.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Carpa / Gazebo</h3>
+            <p class="text-gray-600 text-sm">Ideal para exteriores</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$30</span>
+                <input type="checkbox" class="item" data-name="Carpa" data-price="30">
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="https://i.postimg.cc/52F9qh6n/tematica.png" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold">Temática Completa</h3>
+            <p class="text-gray-600 text-sm">Baby Shower, Safari, Rosa Gold, etc.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="text-gray-700 font-semibold">$45</span>
+                <input type="checkbox" class="item" data-name="Temática completa" data-price="45">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TOTAL -->
+    <div class="text-center mt-10">
+        <h3 class="title-font text-3xl gold">Costo aproximado</h3>
+        <p id="total" class="text-5xl font-bold mt-2 gold">$0</p>
     </div>
 </section>
 
-<!-- FORMULARIO DE RESERVA -->
-<section class="py-20 px-6 bg-pink-50/50">
-    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Reserva tu Fecha</h2>
+<!-- COMBOS ARMADOS -->
+<section class="py-16 px-6 bg-pink-50/50">
+    <h2 class="title-font text-4xl text-center gold mb-10">Combos Listos</h2>
 
-    <form name="reservas" method="POST" data-netlify="true" class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-soft space-y-6">
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-        <input type="hidden" name="form-name" value="reservas">
+        <div class="card bg-white shadow p-6 rounded-xl">
+            <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold">Baby Shower Cloud Gold</h3>
+            <p class="text-gray-600 text-sm mb-4">Cilindros + Arco orgánico + Mesa + Temática completa</p>
+            <span class="gold font-bold text-xl">Desde $160</span>
+            <button onclick="selectCombo('Baby Shower Cloud Gold',160)" class="mt-4 bg-gold text-white px-6 py-2 rounded-lg w-full">
+                Seleccionar Combo
+            </button>
+        </div>
+
+        <div class="card bg-white shadow p-6 rounded-xl">
+            <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold">Safari Kids Premium</h3>
+            <p class="text-gray-600 text-sm mb-4">Temática, cilindros, mesa dulce, arco safari</p>
+            <span class="gold font-bold text-xl">Desde $180</span>
+            <button onclick="selectCombo('Safari Kids Premium',180)" class="mt-4 bg-gold text-white px-6 py-2 rounded-lg w-full">
+                Seleccionar Combo
+            </button>
+        </div>
+
+        <div class="card bg-white shadow p-6 rounded-xl">
+            <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold">Boda Minimal Deluxe</h3>
+            <p class="text-gray-600 text-sm mb-4">Aro floral, mesa elegante, caminito, sillas</p>
+            <span class="gold font-bold text-xl">Desde $220</span>
+            <button onclick="selectCombo('Boda Minimal Deluxe',220)" class="mt-4 bg-gold text-white px-6 py-2 rounded-lg w-full">
+                Seleccionar Combo
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="py-20 px-6 max-w-3xl mx-auto">
+    <h2 class="title-font text-4xl gold text-center mb-10">Enviar Mi Solicitud</h2>
+
+    <form name="eventos" method="POST" data-netlify="true" class="bg-white shadow p-8 rounded-xl space-y-6">
+
+        <input type="hidden" name="form-name" value="eventos">
+
+        <input type="hidden" name="items" id="itemsField">
+        <input type="hidden" name="total" id="totalField">
+        <input type="hidden" name="combo" id="comboField">
 
         <div>
-            <label class="font-semibold text-gray-700">Nombre</label>
+            <label class="font-semibold">Nombre</label>
             <input type="text" name="nombre" required class="w-full border p-3 rounded-lg mt-1">
         </div>
 
         <div>
-            <label class="font-semibold text-gray-700">Fecha del Evento</label>
-            <input type="date" name="fecha" required class="w-full border p-3 rounded-lg mt-1">
-        </div>
-
-        <div>
-            <label class="font-semibold text-gray-700">WhatsApp</label>
+            <label class="font-semibold">WhatsApp</label>
             <input type="text" name="whatsapp" required class="w-full border p-3 rounded-lg mt-1">
         </div>
 
         <div>
-            <label class="font-semibold text-gray-700">Temática</label>
-            <input type="text" name="tematica" class="w-full border p-3 rounded-lg mt-1">
+            <label class="font-semibold">Fecha del Evento</label>
+            <input type="date" name="fecha" required class="w-full border p-3 rounded-lg mt-1">
         </div>
 
-        <button class="w-full bg-gold text-white py-3 rounded-lg text-lg font-medium shadow-soft hover:opacity-90">
-            Enviar Reserva
-        </button>
+        <div>
+            <label class="font-semibold">Ubicación</label>
+            <input type="text" name="ubicacion" class="w-full border p-3 rounded-lg mt-1">
+        </div>
+
+        <button class="w-full bg-gold text-white py-3 rounded-lg text-lg">Enviar Solicitud</button>
     </form>
 </section>
 
-<!-- FOOTER -->
+<script>
+// SUMADOR DINÁMICO
+let items = [];
+const inputs = document.querySelectorAll(".item");
+inputs.forEach(i => {
+    i.addEventListener("change", () => {
+        const name = i.dataset.name;
+        const price = parseInt(i.dataset.price);
+
+        if (i.checked) {
+            items.push({name, price});
+        } else {
+            items = items.filter(e => e.name !== name);
+        }
+
+        updateTotal();
+    });
+});
+
+function updateTotal() {
+    let total = items.reduce((acc, item) => acc + item.price, 0);
+    document.getElementById("total").innerText = `$${total}`;
+    document.getElementById("totalField").value = total;
+    document.getElementById("itemsField").value = JSON.stringify(items);
+}
+
+// SELECCIÓN DE COMBO
+function selectCombo(comboName, comboPrice) {
+    document.getElementById("comboField").value = comboName;
+    document.getElementById("total").innerText = `$${comboPrice}`;
+    document.getElementById("totalField").value = comboPrice;
+}
+</script>
+
 <footer class="py-8 text-center">
     <p class="text-gray-600 text-sm">© 2025 Gaby Garzón Events · Todos los derechos reservados</p>
 </footer>
