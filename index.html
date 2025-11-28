@@ -19,48 +19,101 @@
         .gradient-bg {
             background: linear-gradient(135deg, #fbe9f4 0%, #fff9fc 40%, #fef3e7 100%);
         }
-        .card { transition: .2s; }
-        .card:hover { transform: translateY(-4px); }
+
+        /* BOTÓN FLOTANTE */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            animation: pop .3s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* ANIMACIONES */
+        .fade { animation: fadeIn .7s ease; }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .card:hover {
+            transform: translateY(-4px) scale(1.02);
+            transition: 0.2s;
+        }
+
+        /* FILTROS */
+        .filter-btn {
+            border: 2px solid #d4a055;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .filter-btn.active {
+            background: #d4a055;
+            color: white;
+        }
     </style>
 </head>
 
 <body class="bg-white">
 
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/593XXXXXXXXX?text=Hola%20Gaby%20Garzón%20Events%2C%20necesito%20una%20decoración%20para%20mi%20evento"
+   class="whatsapp-float">
+    <img src="https://i.postimg.cc/HLKGZrwv/whatsapp.png" width="30">
+</a>
+
 <!-- HERO -->
-<header class="gradient-bg py-20 px-6 text-center">
+<header class="gradient-bg py-20 px-6 text-center fade">
     <h1 class="title-font text-5xl font-bold gold mb-4">Gaby Garzón Events</h1>
     <p class="text-gray-700 max-w-2xl mx-auto text-lg">
-        Elige tus piezas, tus decoraciones, tus combos listos y arma tu evento perfecto.
-        Mira el valor aproximado en tiempo real y envíalo directo por WhatsApp ✨
+        Arma tu evento perfecto: elige piezas, decoraciones, temáticas o paquetes listos.
+        Mira el costo aproximado en tiempo real ✨
     </p>
 </header>
 
+<!-- FILTROS -->
+<div class="flex flex-wrap justify-center gap-4 my-10 fade">
+    <button class="filter-btn active" onclick="filterItems('all')">Todo</button>
+    <button class="filter-btn" onclick="filterItems('paquete')">Paquetes</button>
+    <button class="filter-btn" onclick="filterItems('pieza')">Piezas</button>
+</div>
+
 <!-- CONTENEDOR -->
-<main class="px-6 py-16 max-w-7xl mx-auto">
+<main class="px-6 max-w-7xl mx-auto fade">
 
-    <!-- SECCIÓN: PAQUETES LISTOS -->
-    <section>
-        <h2 class="title-font text-4xl gold mb-10 text-center">Paquetes Listos</h2>
-        <div id="paquetesContainer" class="grid md:grid-cols-3 gap-8"></div>
-    </section>
+    <!-- PAQUETES -->
+    <h2 class="title-font text-4xl gold mb-10 text-center">Paquetes Listos</h2>
+    <div id="paquetesContainer" class="grid md:grid-cols-3 gap-8 fade"></div>
 
-    <!-- SECCIÓN: PIEZAS -->
-    <section class="mt-20">
-        <h2 class="title-font text-4xl gold mb-10 text-center">Piezas Individuales</h2>
-        <div id="piezasContainer" class="grid md:grid-cols-3 gap-8"></div>
-    </section>
+    <!-- PIEZAS -->
+    <h2 class="title-font text-4xl gold mt-20 mb-10 text-center">Piezas Individuales</h2>
+    <div id="piezasContainer" class="grid md:grid-cols-3 gap-8 fade"></div>
 
     <!-- TOTAL -->
-    <section class="mt-20 text-center">
+    <section class="mt-20 text-center fade">
         <h3 class="title-font text-3xl gold">Costo aproximado</h3>
         <p id="total" class="text-5xl font-bold mt-2 gold">$0</p>
     </section>
 
     <!-- FORMULARIO -->
-    <section class="mt-20 max-w-3xl mx-auto">
+    <section class="mt-20 max-w-3xl mx-auto fade">
         <h2 class="title-font text-4xl gold text-center mb-10">Enviar mi cotización</h2>
 
-        <form name="cotizacion" method="POST" data-netlify="true" class="bg-white shadow p-8 rounded-xl space-y-6">
+        <form name="cotizacion" method="POST" data-netlify="true" action="/gracias.html" class="bg-white shadow p-8 rounded-xl space-y-6">
 
             <input type="hidden" name="form-name" value="cotizacion">
             <input type="hidden" name="items" id="itemsField">
@@ -86,11 +139,13 @@
                 <input type="text" name="ubicacion" class="w-full border p-3 rounded-lg mt-1">
             </div>
 
-            <button class="w-full bg-gold text-white py-3 rounded-lg text-lg">Enviar Solicitud</button>
+            <button class="w-full bg-gold text-white py-3 rounded-lg text-lg shadow-lg hover:bg-gold/80">
+                Enviar solicitud
+            </button>
         </form>
 
-        <!-- WHATSAPP BUTTON -->
-        <div class="text-center mt-6">
+        <!-- WhatsApp directo -->
+        <div class="text-center mt-6 fade">
             <button onclick="sendWhatsApp()"
                 class="bg-green-500 text-white px-8 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600">
                 Enviar por WhatsApp 📲
@@ -100,8 +155,7 @@
 
 </main>
 
-<!-- FOOTER -->
-<footer class="py-10 text-center text-gray-600">
+<footer class="py-10 text-center text-gray-600 mt-20 fade">
     © 2025 Gaby Garzón Events · Todos los derechos reservados
 </footer>
 
@@ -109,65 +163,79 @@
 <script>
 let items = [];
 let total = 0;
-let dataURL = "data.json"; // Archivo dinámico
 
-// CARGAR JSON
-fetch(dataURL)
-    .then(res => res.json())
+fetch("data.json")
+    .then(r => r.json())
     .then(data => {
         renderPaquetes(data.paquetes);
         renderPiezas(data.piezas);
     });
 
-// RENDER PAQUETES
-function renderPaquetes(paquetes) {
+// FILTRO
+function filterItems(type) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const pqs = document.querySelectorAll('.paquete');
+    const pzs = document.querySelectorAll('.pieza');
+
+    if (type === "all") {
+        pqs.forEach(e => e.style.display = "block");
+        pzs.forEach(e => e.style.display = "block");
+    } else if (type === "paquete") {
+        pqs.forEach(e => e.style.display = "block");
+        pzs.forEach(e => e.style.display = "none");
+    } else {
+        pqs.forEach(e => e.style.display = "none");
+        pzs.forEach(e => e.style.display = "block");
+    }
+}
+
+// PAQUETES
+function renderPaquetes(list) {
     const container = document.getElementById("paquetesContainer");
-    paquetes.forEach(p => {
+    list.forEach(p => {
         container.innerHTML += `
-        <div class="card bg-white rounded-xl shadow p-5">
+        <div class="card paquete bg-white rounded-xl shadow p-5 fade">
             <img src="${p.foto}" class="rounded-lg mb-4">
             <h3 class="title-font text-2xl gold mb-2">${p.nombre}</h3>
             <p class="text-gray-700 font-bold mb-4">$${p.precio}</p>
-
             <button onclick='addItem(${JSON.stringify(p)})'
-                class="w-full bg-gold text-white py-2 rounded-lg">Agregar</button>
+                class="w-full bg-gold text-white py-2 rounded-lg shadow">Agregar</button>
         </div>`;
     });
 }
 
-// RENDER PIEZAS
-function renderPiezas(piezas) {
+// PIEZAS
+function renderPiezas(list) {
     const container = document.getElementById("piezasContainer");
-    piezas.forEach(p => {
+    list.forEach(p => {
         container.innerHTML += `
-        <div class="card bg-white rounded-xl shadow p-5">
+        <div class="card pieza bg-white rounded-xl shadow p-5 fade">
             <img src="${p.foto}" class="rounded-lg mb-4">
             <h3 class="title-font text-xl gold">${p.nombre}</h3>
             <p class="text-gray-700 font-bold mb-4">$${p.precio}</p>
-
             <button onclick='addItem(${JSON.stringify(p)})'
-                class="w-full bg-gold text-white py-2 rounded-lg">Agregar</button>
+                class="w-full bg-gold text-white py-2 rounded-lg shadow">Agregar</button>
         </div>`;
     });
 }
 
-// AÑADIR ITEM
 function addItem(obj) {
     items.push(obj);
     updateTotal();
 }
 
-// ACTUALIZAR TOTAL
 function updateTotal() {
-    total = items.reduce((acc, item) => acc + Number(item.precio), 0);
+    total = items.reduce((a,i) => a + Number(i.precio), 0);
     document.getElementById("total").innerText = "$" + total;
     document.getElementById("itemsField").value = JSON.stringify(items);
     document.getElementById("totalField").value = total;
 }
 
-// WHATSAPP
+// WhatsApp
 function sendWhatsApp() {
-    let msg = "Hola, estas son las opciones que seleccioné en Gaby Garzón Events:%0A%0A";
+    let msg = "Hola Gaby Garzón Events, seleccioné:%0A%0A";
 
     items.forEach(i => {
         msg += `• ${i.nombre} – $${i.precio}%0A`;
