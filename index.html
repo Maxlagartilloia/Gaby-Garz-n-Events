@@ -1,252 +1,235 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaby Garzón Events | Cotizador Interactivo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaby Garzón Events | App Builder</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .title-font { font-family: 'Playfair Display', serif; }
-        .gold { color: #d4a055; }
-        .bg-gold { background-color: #d4a055; }
-        .gradient-bg {
-            background: linear-gradient(135deg, #fbe9f4 0%, #fff9fc 40%, #fef3e7 100%);
-        }
+<style>
+body { font-family: 'Poppins', sans-serif; }
+.title-font { font-family: 'Playfair Display', serif; }
+.gold { color: #d4a055; }
+.bg-gold { background-color: #d4a055; }
 
-        /* BOTÓN FLOTANTE */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 100;
-            animation: pop .3s ease;
-        }
+.page { display: none; }
+.page.active { display: block; animation: fade .4s ease; }
 
-        @keyframes pop {
-            0% { transform: scale(0); }
-            100% { transform: scale(1); }
-        }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-        /* ANIMACIONES */
-        .fade { animation: fadeIn .7s ease; }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(15px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .card:hover {
-            transform: translateY(-4px) scale(1.02);
-            transition: 0.2s;
-        }
+.nav-icon { width: 24px; opacity: 0.8; }
+.nav-item.active .nav-icon { opacity: 1; }
 
-        /* FILTROS */
-        .filter-btn {
-            border: 2px solid #d4a055;
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-        .filter-btn.active {
-            background: #d4a055;
-            color: white;
-        }
-    </style>
+.card:hover { transform: scale(1.02); transition: 0.2s; }
+</style>
 </head>
 
 <body class="bg-white">
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/593XXXXXXXXX?text=Hola%20Gaby%20Garzón%20Events%2C%20necesito%20una%20decoración%20para%20mi%20evento"
-   class="whatsapp-float">
-    <img src="https://i.postimg.cc/HLKGZrwv/whatsapp.png" width="30">
-</a>
-
-<!-- HERO -->
-<header class="gradient-bg py-20 px-6 text-center fade">
-    <h1 class="title-font text-5xl font-bold gold mb-4">Gaby Garzón Events</h1>
-    <p class="text-gray-700 max-w-2xl mx-auto text-lg">
-        Arma tu evento perfecto: elige piezas, decoraciones, temáticas o paquetes listos.
-        Mira el costo aproximado en tiempo real ✨
-    </p>
+<!-- HEADER -->
+<header class="bg-pink-100 text-center py-6 shadow">
+    <h1 class="title-font text-3xl gold">Gaby Garzón Events</h1>
+    <p class="text-gray-600 text-sm px-4">Arma tu evento como si fuera una App 🎀</p>
 </header>
 
-<!-- FILTROS -->
-<div class="flex flex-wrap justify-center gap-4 my-10 fade">
-    <button class="filter-btn active" onclick="filterItems('all')">Todo</button>
-    <button class="filter-btn" onclick="filterItems('paquete')">Paquetes</button>
-    <button class="filter-btn" onclick="filterItems('pieza')">Piezas</button>
+<!-- PÁGINAS -->
+<div id="home" class="page active px-4 py-6">
+    <h2 class="text-2xl title-font gold mb-4">Bienvenida ✨</h2>
+    <p class="text-gray-700 mb-6">
+        Elige paquetes, piezas y arma tu evento soñado. Mira precios en tiempo real y envíalo por WhatsApp.
+    </p>
+
+    <img src="cloud-gold.jpg" class="rounded-xl shadow-lg mb-6">
+
+    <button onclick="openPage('paquetes')" class="bg-gold text-white w-full py-3 rounded-lg shadow text-lg">
+        Empezar a armar 🎉
+    </button>
 </div>
 
-<!-- CONTENEDOR -->
-<main class="px-6 max-w-7xl mx-auto fade">
+<!-- PAQUETES -->
+<div id="paquetes" class="page px-4 py-6">
+    <h2 class="text-2xl title-font gold mb-6">Paquetes Listos 🎁</h2>
+    <div id="paquetesContainer" class="grid gap-6"></div>
+</div>
 
-    <!-- PAQUETES -->
-    <h2 class="title-font text-4xl gold mb-10 text-center">Paquetes Listos</h2>
-    <div id="paquetesContainer" class="grid md:grid-cols-3 gap-8 fade"></div>
+<!-- PIEZAS -->
+<div id="piezas" class="page px-4 py-6">
+    <h2 class="text-2xl title-font gold mb-6">Piezas Individuales 🧩</h2>
+    <div id="piezasContainer" class="grid gap-6"></div>
+</div>
 
-    <!-- PIEZAS -->
-    <h2 class="title-font text-4xl gold mt-20 mb-10 text-center">Piezas Individuales</h2>
-    <div id="piezasContainer" class="grid md:grid-cols-3 gap-8 fade"></div>
+<!-- TOTAL -->
+<div id="totalPage" class="page px-4 py-6">
+    <h2 class="text-2xl title-font gold mb-4">Resumen del Evento 💰</h2>
 
-    <!-- TOTAL -->
-    <section class="mt-20 text-center fade">
-        <h3 class="title-font text-3xl gold">Costo aproximado</h3>
-        <p id="total" class="text-5xl font-bold mt-2 gold">$0</p>
-    </section>
+    <div id="itemsList" class="space-y-3 mb-6"></div>
 
-    <!-- FORMULARIO -->
-    <section class="mt-20 max-w-3xl mx-auto fade">
-        <h2 class="title-font text-4xl gold text-center mb-10">Enviar mi cotización</h2>
+    <h3 class="title-font text-3xl gold mb-4">Total: <span id="total" class="font-bold">$0</span></h3>
 
-        <form name="cotizacion" method="POST" data-netlify="true" action="/gracias.html" class="bg-white shadow p-8 rounded-xl space-y-6">
+    <button onclick="openPage('enviar')" class="bg-gold text-white w-full py-3 rounded-lg shadow text-lg">
+        Continuar ➜
+    </button>
+</div>
 
-            <input type="hidden" name="form-name" value="cotizacion">
-            <input type="hidden" name="items" id="itemsField">
-            <input type="hidden" name="total" id="totalField">
+<!-- ENVIAR -->
+<div id="enviar" class="page px-4 py-6">
+    <h2 class="text-2xl title-font gold mb-4">Enviar Cotización 📩</h2>
 
-            <div>
-                <label class="font-semibold">Nombre</label>
-                <input type="text" name="nombre" required class="w-full border p-3 rounded-lg mt-1">
-            </div>
+    <form name="cotizacion" method="POST" data-netlify="true" action="/gracias.html"
+        class="bg-white shadow p-5 rounded-xl space-y-5">
 
-            <div>
-                <label class="font-semibold">WhatsApp</label>
-                <input type="text" name="whatsapp" required class="w-full border p-3 rounded-lg mt-1">
-            </div>
+        <input type="hidden" name="form-name" value="cotizacion">
+        <input type="hidden" name="items" id="itemsField">
+        <input type="hidden" name="total" id="totalField">
 
-            <div>
-                <label class="font-semibold">Fecha del evento</label>
-                <input type="date" name="fecha" required class="w-full border p-3 rounded-lg mt-1">
-            </div>
-
-            <div>
-                <label class="font-semibold">Ubicación</label>
-                <input type="text" name="ubicacion" class="w-full border p-3 rounded-lg mt-1">
-            </div>
-
-            <button class="w-full bg-gold text-white py-3 rounded-lg text-lg shadow-lg hover:bg-gold/80">
-                Enviar solicitud
-            </button>
-        </form>
-
-        <!-- WhatsApp directo -->
-        <div class="text-center mt-6 fade">
-            <button onclick="sendWhatsApp()"
-                class="bg-green-500 text-white px-8 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600">
-                Enviar por WhatsApp 📲
-            </button>
+        <div>
+            <label class="font-semibold">Nombre</label>
+            <input type="text" name="nombre" required class="w-full border p-3 rounded-lg mt-1">
         </div>
-    </section>
 
-</main>
+        <div>
+            <label class="font-semibold">WhatsApp</label>
+            <input type="text" name="whatsapp" required class="w-full border p-3 rounded-lg mt-1">
+        </div>
 
-<footer class="py-10 text-center text-gray-600 mt-20 fade">
-    © 2025 Gaby Garzón Events · Todos los derechos reservados
-</footer>
+        <div>
+            <label class="font-semibold">Fecha del evento</label>
+            <input type="date" name="fecha" required class="w-full border p-3 rounded-lg mt-1">
+        </div>
 
-<!-- SCRIPT -->
+        <div>
+            <label class="font-semibold">Ubicación</label>
+            <input type="text" name="ubicacion" class="w-full border p-3 rounded-lg mt-1">
+        </div>
+
+        <button class="bg-gold text-white w-full py-3 rounded-lg shadow text-lg">
+            Enviar Solicitud
+        </button>
+    </form>
+
+    <button onclick="sendWhatsApp()" class="bg-green-500 text-white mt-4 w-full py-3 rounded-lg text-lg shadow-lg">
+        Enviar por WhatsApp 📲
+    </button>
+</div>
+
+<!-- NAV INFERIOR -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg py-2 flex justify-around border-t">
+    <div class="nav-item active" onclick="openPage('home')">
+        <img class="nav-icon" src="https://img.icons8.com/ios-filled/50/home.png">
+    </div>
+    <div class="nav-item" onclick="openPage('paquetes')">
+        <img class="nav-icon" src="https://img.icons8.com/ios-filled/50/gift.png">
+    </div>
+    <div class="nav-item" onclick="openPage('piezas')">
+        <img class="nav-icon" src="https://img.icons8.com/ios-filled/50/puzzle.png">
+    </div>
+    <div class="nav-item" onclick="openPage('totalPage')">
+        <img class="nav-icon" src="https://img.icons8.com/ios-filled/50/money.png">
+    </div>
+    <div class="nav-item" onclick="openPage('enviar')">
+        <img class="nav-icon" src="https://img.icons8.com/ios-filled/50/paper-plane.png">
+    </div>
+</nav>
+
 <script>
 let items = [];
 let total = 0;
 
+// Cambiar página
+function openPage(id) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+
+    document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
+    event.target.closest(".nav-item").classList.add("active");
+
+    updateSummary();
+}
+
+// Cargar JSON
 fetch("data.json")
     .then(r => r.json())
-    .then(data => {
-        renderPaquetes(data.paquetes);
-        renderPiezas(data.piezas);
+    .then(d => {
+        renderPaquetes(d.paquetes);
+        renderPiezas(d.piezas);
     });
 
-// FILTRO
-function filterItems(type) {
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    const pqs = document.querySelectorAll('.paquete');
-    const pzs = document.querySelectorAll('.pieza');
-
-    if (type === "all") {
-        pqs.forEach(e => e.style.display = "block");
-        pzs.forEach(e => e.style.display = "block");
-    } else if (type === "paquete") {
-        pqs.forEach(e => e.style.display = "block");
-        pzs.forEach(e => e.style.display = "none");
-    } else {
-        pqs.forEach(e => e.style.display = "none");
-        pzs.forEach(e => e.style.display = "block");
-    }
-}
-
-// PAQUETES
+// Render paquetes
 function renderPaquetes(list) {
-    const container = document.getElementById("paquetesContainer");
+    const c = document.getElementById("paquetesContainer");
     list.forEach(p => {
-        container.innerHTML += `
-        <div class="card paquete bg-white rounded-xl shadow p-5 fade">
-            <img src="${p.foto}" class="rounded-lg mb-4">
-            <h3 class="title-font text-2xl gold mb-2">${p.nombre}</h3>
-            <p class="text-gray-700 font-bold mb-4">$${p.precio}</p>
+        c.innerHTML += `
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="${p.foto}" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold mb-1">${p.nombre}</h3>
+            <p class="text-gray-800 font-bold mb-3">$${p.precio}</p>
             <button onclick='addItem(${JSON.stringify(p)})'
-                class="w-full bg-gold text-white py-2 rounded-lg shadow">Agregar</button>
+                class="bg-gold text-white w-full py-2 rounded-lg">Agregar</button>
         </div>`;
     });
 }
 
-// PIEZAS
+// Render piezas
 function renderPiezas(list) {
-    const container = document.getElementById("piezasContainer");
+    const c = document.getElementById("piezasContainer");
     list.forEach(p => {
-        container.innerHTML += `
-        <div class="card pieza bg-white rounded-xl shadow p-5 fade">
-            <img src="${p.foto}" class="rounded-lg mb-4">
-            <h3 class="title-font text-xl gold">${p.nombre}</h3>
-            <p class="text-gray-700 font-bold mb-4">$${p.precio}</p>
+        c.innerHTML += `
+        <div class="card bg-white rounded-xl shadow p-4">
+            <img src="${p.foto}" class="rounded-lg mb-3">
+            <h3 class="title-font text-xl gold mb-1">${p.nombre}</h3>
+            <p class="text-gray-800 font-bold mb-3">$${p.precio}</p>
             <button onclick='addItem(${JSON.stringify(p)})'
-                class="w-full bg-gold text-white py-2 rounded-lg shadow">Agregar</button>
+                class="bg-gold text-white w-full py-2 rounded-lg">Agregar</button>
         </div>`;
     });
 }
 
+// Agregar item
 function addItem(obj) {
     items.push(obj);
-    updateTotal();
+    updateSummary();
 }
 
-function updateTotal() {
-    total = items.reduce((a,i) => a + Number(i.precio), 0);
-    document.getElementById("total").innerText = "$" + total;
+// Actualizar resumen
+function updateSummary() {
+    const list = document.getElementById("itemsList");
+    const t = document.getElementById("total");
+
+    list.innerHTML = "";
+    total = 0;
+
+    items.forEach(i => {
+        list.innerHTML += `
+        <div class="border p-3 rounded-lg">
+            <p class="font-semibold gold">${i.nombre}</p>
+            <p class="text-gray-700">$${i.precio}</p>
+        </div>`;
+        total += Number(i.precio);
+    });
+
+    t.innerText = "$" + total;
     document.getElementById("itemsField").value = JSON.stringify(items);
     document.getElementById("totalField").value = total;
 }
 
 // WhatsApp
 function sendWhatsApp() {
-    let msg = "Hola Gaby Garzón Events, seleccioné:%0A%0A";
-
+    let msg = "Hola, estas son mis selecciones en Gaby Garzón Events:%0A%0A";
     items.forEach(i => {
-        msg += `• ${i.nombre} – $${i.precio}%0A`;
-        msg += `Foto: ${window.location.origin}/${i.foto}%0A%0A`;
+        msg += `• ${i.nombre} – $${i.precio}%0AFoto: ${window.location.origin}/${i.foto}%0A%0A`;
     });
-
-    msg += `TOTAL APROX: $${total}%0A`;
+    msg += `TOTAL: $${total}%0A`;
 
     window.open("https://wa.me/593XXXXXXXXX?text=" + msg, "_blank");
 }
 </script>
 
 </body>
+</html>
 </html>
