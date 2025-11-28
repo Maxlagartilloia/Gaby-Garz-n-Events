@@ -1,0 +1,127 @@
+{
+  "paquetes": [
+    {
+      "id": 1,
+      "nombre": "Cloud Gold Baby Shower",
+      "precio": 160,
+      "foto": "cloud-gold.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Safari Kids Premium",
+      "precio": 180,
+      "foto": "safari-premium.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Boda Minimal Deluxe",
+      "precio": 220,
+      "foto": "minimal-boda.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Cumpleaños Stitch",
+      "precio": 150,
+      "foto": "stitch.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Rosa Gold Deluxe",
+      "precio": 190,
+      "foto": "rosa-gold.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Ángel Blanco Baby",
+      "precio": 170,
+      "foto": "angel-blanco.jpg"
+    }
+  ],
+
+  "piezas": [
+    {
+      "id": 10,
+      "nombre": "Cilindros (set 3)",
+      "precio": 25,
+      "foto": "cilindros.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "Aro Circular",
+      "precio": 20,
+      "foto": "aro-circular.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Mesa Principal",
+      "precio": 15,
+      "foto": "mesa-principal.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Mesa Dulce",
+      "precio": 20,
+      "foto": "mesa-dulce.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "Sillas Tiffany",
+      "precio": 10,
+      "foto": "sillas-tiffany.jpg"
+    },
+    {
+      "id": 15,
+      "nombre": "Sillas Forradas",
+      "precio": 5,
+      "foto": "sillas-forradas.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "Carpa / Gazebo",
+      "precio": 30,
+      "foto": "carpas.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "Tablero Redondo",
+      "precio": 8,
+      "foto": "tablero-redondo.jpg"
+    },
+    {
+      "id": 18,
+      "nombre": "Tablero Rectangular",
+      "precio": 10,
+      "foto": "tablero-rectangular.jpg"
+    },
+    {
+      "id": 19,
+      "nombre": "Arco Orgánico",
+      "precio": 40,
+      "foto": "arco-organico.jpg"
+    },
+    {
+      "id": 20,
+      "nombre": "Backing Rosa",
+      "precio": 25,
+      "foto": "backing-rosa.jpg"
+    },
+    {
+      "id": 21,
+      "nombre": "Backing Blanco",
+      "precio": 25,
+      "foto": "backing-blanco.jpg"
+    },
+    {
+      "id": 22,
+      "nombre": "Temática Baby Gold",
+      "precio": 45,
+      "foto": "tematica-baby-gold.jpg"
+    },
+    {
+      "id": 23,
+      "nombre": "Temática Safari",
+      "precio": 40,
+      "foto": "tematica-safari.jpg"
+    }
+  ]
+}
