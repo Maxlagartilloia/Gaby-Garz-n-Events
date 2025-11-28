@@ -1,127 +1,70 @@
 {
   "paquetes": [
-    {
-      "id": 1,
-      "nombre": "Cloud Gold Baby Shower",
-      "precio": 160,
-      "foto": "cloud-gold.jpg"
-    },
-    {
-      "id": 2,
-      "nombre": "Safari Kids Premium",
-      "precio": 180,
-      "foto": "safari-premium.jpg"
-    },
-    {
-      "id": 3,
-      "nombre": "Boda Minimal Deluxe",
-      "precio": 220,
-      "foto": "minimal-boda.jpg"
-    },
-    {
-      "id": 4,
-      "nombre": "Cumpleaños Stitch",
-      "precio": 150,
-      "foto": "stitch.jpg"
-    },
-    {
-      "id": 5,
-      "nombre": "Rosa Gold Deluxe",
-      "precio": 190,
-      "foto": "rosa-gold.jpg"
-    },
-    {
-      "id": 6,
-      "nombre": "Ángel Blanco Baby",
-      "precio": 170,
-      "foto": "angel-blanco.jpg"
-    }
+    { "id": 1,  "nombre": "Cloud Gold Baby Shower", "precio": 160, "foto": "cloud-gold.jpg" },
+    { "id": 2,  "nombre": "Safari Kids Premium", "precio": 180, "foto": "safari-premium.jpg" },
+    { "id": 3,  "nombre": "Boda Minimal Deluxe", "precio": 220, "foto": "boda-minimal.jpg" },
+    { "id": 4,  "nombre": "Cumpleaños Stitch", "precio": 150, "foto": "stitch.jpg" },
+    { "id": 5,  "nombre": "Rosa Gold Deluxe", "precio": 190, "foto": "rosa-gold.jpg" },
+    { "id": 6,  "nombre": "Ángel Blanco Baby", "precio": 170, "foto": "angel-blanco.jpg" },
+    { "id": 7,  "nombre": "Temática Unicornio Deluxe", "precio": 200, "foto": "unicornio.jpg" },
+    { "id": 8,  "nombre": "Peppa Pig Pink Party", "precio": 185, "foto": "peppa.jpg" },
+    { "id": 9,  "nombre": "Baby Shower Celestial", "precio": 175, "foto": "celestial.jpg" },
+    { "id": 10, "nombre": "Mario Bros Party", "precio": 160, "foto": "mario.jpg" },
+    { "id": 11, "nombre": "Frozen Ice Party", "precio": 195, "foto": "frozen.jpg" },
+    { "id": 12, "nombre": "Spiderman Hero Party", "precio": 180, "foto": "spiderman.jpg" },
+    { "id": 13, "nombre": "Dinosaurio Jurassic Deluxe", "precio": 210, "foto": "dinosaurio.jpg" },
+    { "id": 14, "nombre": "Selva Tropical Kids", "precio": 170, "foto": "selva.jpg" },
+    { "id": 15, "nombre": "Baby Pink Premium", "precio": 190, "foto": "baby-pink.jpg" },
+    { "id": 16, "nombre": "TikTok Party", "precio": 180, "foto": "tiktok.jpg" },
+    { "id": 17, "nombre": "Princesas Royal", "precio": 220, "foto": "princesas.jpg" },
+    { "id": 18, "nombre": "Sweet Candy Party", "precio": 165, "foto": "candy.jpg" },
+    { "id": 19, "nombre": "Boda Rose Gold", "precio": 250, "foto": "boda-rose-gold.jpg" },
+    { "id": 20, "nombre": "Quinceañera Glam Pink", "precio": 260, "foto": "quince-pink.jpg" }
   ],
 
   "piezas": [
-    {
-      "id": 10,
-      "nombre": "Cilindros (set 3)",
-      "precio": 25,
-      "foto": "cilindros.jpg"
-    },
-    {
-      "id": 11,
-      "nombre": "Aro Circular",
-      "precio": 20,
-      "foto": "aro-circular.jpg"
-    },
-    {
-      "id": 12,
-      "nombre": "Mesa Principal",
-      "precio": 15,
-      "foto": "mesa-principal.jpg"
-    },
-    {
-      "id": 13,
-      "nombre": "Mesa Dulce",
-      "precio": 20,
-      "foto": "mesa-dulce.jpg"
-    },
-    {
-      "id": 14,
-      "nombre": "Sillas Tiffany",
-      "precio": 10,
-      "foto": "sillas-tiffany.jpg"
-    },
-    {
-      "id": 15,
-      "nombre": "Sillas Forradas",
-      "precio": 5,
-      "foto": "sillas-forradas.jpg"
-    },
-    {
-      "id": 16,
-      "nombre": "Carpa / Gazebo",
-      "precio": 30,
-      "foto": "carpas.jpg"
-    },
-    {
-      "id": 17,
-      "nombre": "Tablero Redondo",
-      "precio": 8,
-      "foto": "tablero-redondo.jpg"
-    },
-    {
-      "id": 18,
-      "nombre": "Tablero Rectangular",
-      "precio": 10,
-      "foto": "tablero-rectangular.jpg"
-    },
-    {
-      "id": 19,
-      "nombre": "Arco Orgánico",
-      "precio": 40,
-      "foto": "arco-organico.jpg"
-    },
-    {
-      "id": 20,
-      "nombre": "Backing Rosa",
-      "precio": 25,
-      "foto": "backing-rosa.jpg"
-    },
-    {
-      "id": 21,
-      "nombre": "Backing Blanco",
-      "precio": 25,
-      "foto": "backing-blanco.jpg"
-    },
-    {
-      "id": 22,
-      "nombre": "Temática Baby Gold",
-      "precio": 45,
-      "foto": "tematica-baby-gold.jpg"
-    },
-    {
-      "id": 23,
-      "nombre": "Temática Safari",
-      "precio": 40,
-      "foto": "tematica-safari.jpg"
-    }
+    { "id": 100, "nombre": "Cilindros (set 3)", "precio": 25, "foto": "cilindros.jpg" },
+    { "id": 101, "nombre": "Aro Circular", "precio": 20, "foto": "aro-circular.jpg" },
+    { "id": 102, "nombre": "Mesa Principal", "precio": 15, "foto": "mesa-principal.jpg" },
+    { "id": 103, "nombre": "Mesa Dulce", "precio": 20, "foto": "mesa-dulce.jpg" },
+
+    { "id": 104, "nombre": "Sillas Tiffany", "precio": 10, "foto": "sillas-tiffany.jpg" },
+    { "id": 105, "nombre": "Sillas Forradas", "precio": 5, "foto": "sillas-forradas.jpg" },
+    { "id": 106, "nombre": "Carpa / Gazebo 3x3", "precio": 30, "foto": "carpa-3x3.jpg" },
+    { "id": 107, "nombre": "Carpa / Gazebo 6x6", "precio": 55, "foto": "carpa-6x6.jpg" },
+
+    { "id": 108, "nombre": "Tablero Redondo", "precio": 8, "foto": "tablero-redondo.jpg" },
+    { "id": 109, "nombre": "Tablero Rectangular", "precio": 10, "foto": "tablero-rectangular.jpg" },
+
+    { "id": 110, "nombre": "Arco Orgánico Premium", "precio": 40, "foto": "arco-organico.jpg" },
+    { "id": 111, "nombre": "Arco de Globos Metalizados", "precio": 45, "foto": "arco-metalico.jpg" },
+    { "id": 112, "nombre": "Guirnalda Pastel", "precio": 25, "foto": "guirnalda.jpg" },
+
+    { "id": 113, "nombre": "Backing Rosa", "precio": 25, "foto": "backing-rosa.jpg" },
+    { "id": 114, "nombre": "Backing Blanco", "precio": 25, "foto": "backing-blanco.jpg" },
+    { "id": 115, "nombre": "Backing Floral", "precio": 45, "foto": "backing-floral.jpg" },
+    { "id": 116, "nombre": "Cortina Metálica", "precio": 10, "foto": "cortina-metalica.jpg" },
+
+    { "id": 117, "nombre": "Letras 3D", "precio": 25, "foto": "letras-3d.jpg" },
+    { "id": 118, "nombre": "Foamy Decorativo", "precio": 12, "foto": "foamy.jpg" },
+    { "id": 119, "nombre": "Centros de Mesa", "precio": 5, "foto": "centro-mesa.jpg" },
+
+    { "id": 120, "nombre": "Temática Baby Gold", "precio": 45, "foto": "tematica-baby-gold.jpg" },
+    { "id": 121, "nombre": "Temática Safari", "precio": 40, "foto": "tematica-safari.jpg" },
+    { "id": 122, "nombre": "Temática Unicornio", "precio": 50, "foto": "tematica-unicornio.jpg" },
+    { "id": 123, "nombre": "Temática Frozen", "precio": 50, "foto": "tematica-frozen.jpg" },
+    { "id": 124, "nombre": "Temática Ángel", "precio": 40, "foto": "tematica-angel.jpg" },
+
+    { "id": 125, "nombre": "Lámparas LED Decorativas", "precio": 20, "foto": "lamparas-led.jpg" },
+    { "id": 126, "nombre": "Alfombra Roja", "precio": 25, "foto": "alfombra-roja.jpg" },
+    { "id": 127, "nombre": "Alfombra Blanca", "precio": 20, "foto": "alfombra-blanca.jpg" },
+
+    { "id": 128, "nombre": "Photobooth Marco Grande", "precio": 40, "foto": "photobooth.jpg" },
+    { "id": 129, "nombre": "Cortina de Luces", "precio": 30, "foto": "cortina-luces.jpg" },
+    { "id": 130, "nombre": "Columnas de Globos", "precio": 22, "foto": "columnas-globos.jpg" },
+
+    { "id": 131, "nombre": "Panel Redondo", "precio": 45, "foto": "panel-redondo.jpg" },
+    { "id": 132, "nombre": "Panel Triangular", "precio": 45, "foto": "panel-triangular.jpg" },
+    { "id": 133, "nombre": "Panel Doble", "precio": 70, "foto": "panel-doble.jpg" }
   ]
 }
