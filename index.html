@@ -1,1230 +1,209 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaby Garzón Events | Luxury Futuristic Events</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaby Garzón Events | Decoración Profesional de Eventos</title>
 
-  <!-- Meta SEO -->
-  <meta name="description" content="Decoración futurista y elegante para fiestas, cumpleaños, bodas y eventos. Salón para 300 personas, alquiler de mantelería, vajilla y estanterías.">
-  <meta name="keywords" content="eventos, decoración, fiestas, cumpleaños, bodas, baby shower, mantelería, vajilla, salón eventos, Gaby Garzón">
-  <meta name="author" content="Gaby Garzón Events">
+    <!-- SEO -->
+    <meta name="description" content="Gaby Garzón Events ofrece decoración elegante y personalizada para baby showers, cumpleaños, bodas, 15 años y eventos especiales. Reserva tu fecha y cotiza al instante.">
+    <meta name="keywords" content="Gaby Garzón Events, decoración de eventos, baby shower, cumpleaños, bodas, eventos Shushufindi, decoraciones elegantes, globos, montajes">
+    <meta name="author" content="Gaby Garzón Events">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gabygarzonevents.crisslombeida.com/">
-  <meta property="og:title" content="Gaby Garzón Events | Luxury Futuristic Events">
-  <meta property="og:description" content="Eventos refinados, futuristas y llenos de detalles. Salón para 300 personas y alquiler de todo para tu fiesta.">
-  <!-- Cambia esta imagen por tu logo/foto oficial -->
-  <meta property="og:image" content="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1200">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="es_EC">
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts & Utilities -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <style>
-    :root{
-      --bg-deep:#050312;
-      --bg-deeper:#02000a;
-      --pink:#ff8ad4;
-      --pink-soft:#ffd0f0;
-      --lilac:#c5a8ff;
-      --gold:#f3d37a;
-      --accent:#7cf0ff;
-      --glass-border:rgba(255,255,255,0.2);
-    }
-
-    html{
-      scroll-behavior:smooth;
-      -webkit-overflow-scrolling:touch;
-    }
-    body{
-      margin:0;
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top, #341250 0%, #050312 40%, #02000a 100%);
-      color:#fdf7ff;
-      font-family:'Inter',sans-serif;
-      overflow-x:hidden;
-    }
-
-    section{
-      content-visibility:auto;
-      contain-intrinsic-size:1px 1000px;
-    }
-
-    .font-display{
-      font-family:'Playfair Display',serif;
-      letter-spacing:0.03em;
-    }
-
-    .header-blur{
-      background:linear-gradient(120deg,rgba(255,138,212,0.26),rgba(2,0,10,0.95));
-      border-bottom:1px solid rgba(255,255,255,0.18);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-    }
-
-    .orb-bg{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-1;
-      background:
-        radial-gradient(circle at 10% 0%,rgba(255,138,212,0.22) 0%,transparent 50%),
-        radial-gradient(circle at 90% 10%,rgba(124,240,255,0.18) 0%,transparent 55%),
-        radial-gradient(circle at 0% 90%,rgba(195,168,255,0.24) 0%,transparent 60%);
-      mix-blend-mode:screen;
-      animation:orbits 26s ease-in-out infinite alternate;
-      opacity:0.9;
-    }
-    @keyframes orbits{
-      0%{ transform:translate3d(0,0,0) scale(1); }
-      50%{ transform:translate3d(0,-25px,0) scale(1.05); }
-      100%{ transform:translate3d(0,15px,0) scale(1.02); }
-    }
-    .is-scrolling .orb-bg{ animation:none !important; }
-
-    .glass{
-      background:linear-gradient(145deg,rgba(255,255,255,0.08),rgba(6,3,24,0.95));
-      border:1px solid var(--glass-border);
-      box-shadow:0 24px 60px rgba(0,0,0,0.9);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-    }
-
-    .pill{
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.4);
-      background:radial-gradient(circle at 0 0,rgba(255,208,240,0.9),rgba(5,3,18,1));
-    }
-
-    .btn-primary{
-      background:conic-gradient(from 130deg,var(--pink),var(--gold),var(--accent),var(--pink));
-      color:#120617;
-      position:relative;
-      overflow:hidden;
-      box-shadow:0 18px 40px rgba(255,138,212,0.7);
-      animation:pulse-btn 2.2s infinite ease-in-out;
-    }
-    .btn-primary::before{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:radial-gradient(circle at 0 0,rgba(255,255,255,0.7),transparent 60%);
-      opacity:0;
-      transform:translateX(-100%);
-      animation:shine 3.4s infinite linear;
-    }
-    @keyframes pulse-btn{
-      0%,100%{ transform:translateY(0) scale(1); box-shadow:0 18px 40px rgba(255,138,212,0.5);}
-      50%{ transform:translateY(-2px) scale(1.02); box-shadow:0 26px 60px rgba(255,138,212,0.9);}
-    }
-    @keyframes shine{
-      0%{ opacity:0; transform:translateX(-120%); }
-      20%{ opacity:1; }
-      60%{ opacity:0; transform:translateX(120%); }
-      100%{ opacity:0; transform:translateX(120%); }
-    }
-
-    .btn-ghost{
-      border:1px solid rgba(255,255,255,0.55);
-      background:transparent;
-    }
-    .btn-ghost:hover{
-      background:rgba(255,255,255,0.08);
-      border-color:transparent;
-      transform:translateY(-1px);
-    }
-
-    .floating-word{
-      display:inline-block;
-      animation:float-word 4.5s ease-in-out infinite;
-    }
-    .floating-word:nth-child(2){ animation-delay:.15s; }
-    .floating-word:nth-child(3){ animation-delay:.3s; }
-    .floating-word:nth-child(4){ animation-delay:.45s; }
-
-    @keyframes float-word{
-      0%,100%{ transform:translateY(0); }
-      50%{ transform:translateY(-6px); }
-    }
-
-    .halo{
-      box-shadow:0 0 0 12px rgba(255,138,212,0.25);
-    }
-
-    .tilt-card{
-      transition:transform .2s ease-out, box-shadow .2s ease-out, border-color .2s ease-out;
-      transform-style:preserve-3d;
-      border-radius:1.8rem;
-      border:1px solid rgba(255,255,255,0.12);
-      background:radial-gradient(circle at top,rgba(255,255,255,0.06),rgba(3,0,15,0.98));
-    }
-    .tilt-card:hover{
-      border-color:rgba(255,138,212,0.6);
-      box-shadow:0 24px 60px rgba(0,0,0,0.95);
-    }
-
-    .service-icon{
-      width:3.2rem;
-      height:3.2rem;
-      border-radius:1.4rem;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.5rem;
-      color:var(--pink-soft);
-      background:radial-gradient(circle at 0 0,rgba(255,138,212,0.9),rgba(20,6,40,1));
-      box-shadow:0 16px 35px rgba(0,0,0,0.8);
-      border:1px solid rgba(255,255,255,0.3);
-    }
-
-    .gallery-item{ aspect-ratio:4/3; object-fit:cover; }
-
-    #gallery-modal{
-      z-index:100; background-color:rgba(2,0,10,0.88);
-      transition:opacity .3s ease; display:none;
-    }
-    #modal-content-wrapper{
-      transform-style:preserve-3d;
-      perspective:1200px;
-    }
-    #modal-image{
-      max-height:90vh;
-      max-width:90vw;
-      transform:rotateX(0deg) rotateY(0deg) scale(0.96);
-      transition:transform .6s ease;
-      border-radius:1.6rem;
-      box-shadow:0 30px 80px rgba(0,0,0,0.9);
-      border:1px solid rgba(255,255,255,0.35);
-    }
-
-    .modal-arrow{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      width:3rem;
-      height:3rem;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.4);
-      background:rgba(0,0,0,0.8);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      cursor:pointer;
-      box-shadow:0 15px 40px rgba(0,0,0,0.8);
-    }
-    .modal-arrow:hover{
-      background:rgba(255,138,212,0.9);
-      color:#120617;
-    }
-    #modal-prev{ left:-3.5rem; }
-    #modal-next{ right:-3.5rem; }
-    @media(max-width:640px){
-      #modal-prev{ left:.8rem; }
-      #modal-next{ right:.8rem; }
-    }
-
-    .ticker{
-      position:relative;
-      overflow:hidden;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.2);
-      background:radial-gradient(circle at 0 0,rgba(255,208,240,0.18),rgba(2,0,10,0.95));
-    }
-    .ticker-track{
-      display:inline-flex;
-      white-space:nowrap;
-      animation:scroll-left 28s linear infinite;
-    }
-    @keyframes scroll-left{
-      0%{ transform:translateX(0); }
-      100%{ transform:translateX(-50%); }
-    }
-
-    ::-webkit-scrollbar{ width:8px; }
-    ::-webkit-scrollbar-thumb{
-      background:linear-gradient(var(--pink),var(--gold));
-      border-radius:999px;
-    }
-    ::-webkit-scrollbar-track{ background:#02000a; }
-
-    @media(prefers-reduced-motion:reduce){
-      .orb-bg{ animation:none !important; }
-      .btn-primary{ animation:none !important; }
-      .floating-word{ animation:none !important; }
-      .ticker-track{ animation:none !important; }
-    }
-  </style>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .title-font { font-family: 'Playfair Display', serif; }
+        .gold { color: #d4a055; }
+        .bg-gold { background-color: #d4a055; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #fbe9f4 0%, #fff9fc 40%, #fef3e7 100%);
+        }
+        .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    </style>
 </head>
-<body>
-  <div class="orb-bg"></div>
 
-  <!-- HEADER -->
-  <header class="header-blur sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-      <a href="#top" class="flex items-center space-x-3">
-        <!-- Cambia por tu logo -->
-        <div class="w-11 h-11 rounded-2xl overflow-hidden halo border border-white/50">
-          <img src="https://images.pexels.com/photos/1128782/pexels-photo-1128782.jpeg?auto=compress&cs=tinysrgb&w=400"
-               alt="Logo Gaby Garzón Events" class="w-full h-full object-cover">
-        </div>
-        <div class="hidden sm:block leading-tight">
-          <div class="font-display text-xs tracking-[0.25em] text-pink-100 uppercase">Gaby Garzón</div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-50">Events · Styling · Decor</div>
-        </div>
-      </a>
+<body class="bg-white">
 
-      <nav class="hidden md:flex items-center space-x-8 text-xs sm:text-sm font-medium">
-        <a href="#experiencias" class="text-slate-100 hover:text-pink-200 transition">Experiencias</a>
-        <a href="#salon" class="text-slate-100 hover:text-pink-200 transition">Salón & Alquiler</a>
-        <a href="#cotizar" class="text-slate-100 hover:text-pink-200 transition">Cotizar</a>
-        <a href="#galeria" class="text-slate-100 hover:text-pink-200 transition">Galería</a>
-        <a href="#faq" class="text-slate-100 hover:text-pink-200 transition">FAQ</a>
-      </nav>
+<!-- HERO -->
+<section class="gradient-bg py-24 px-6 text-center">
+    <h1 class="title-font text-5xl font-bold mb-4 gold">Gaby Garzón Events</h1>
+    <p class="text-gray-700 text-lg max-w-2xl mx-auto">
+        Decoraciones elegantes y modernas para Baby Showers, Cumpleaños, Bodas, 15 Años y Eventos Especiales.
+    </p>
 
-      <div class="hidden md:flex items-center space-x-3">
-        <span class="pill px-3 py-1 text-[0.65rem] uppercase tracking-[0.24em] text-slate-900 flex items-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Agenda 2025 abierta</span>
-        </span>
-        <a href="#cotizar" class="btn-primary px-4 py-2 rounded-full text-[0.7rem] uppercase tracking-[0.22em] font-semibold flex items-center space-x-2">
-          <span>Reservar fecha</span>
-          <i class="fa-solid fa-arrow-right text-[0.65rem]"></i>
+    <div class="mt-8 space-x-4">
+        <a href="https://wa.me/593#########?text=Hola%20quiero%20reservar%20una%20fecha%20con%20Gaby%20Garzón%20Events"
+           class="bg-gold text-white px-8 py-3 rounded-lg shadow-soft font-medium hover:opacity-90">
+           Reservar mi Fecha
         </a>
-      </div>
 
-      <button id="menu-toggle" class="md:hidden text-slate-50 text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
+        <a href="#cotizador"
+           class="border border-gold text-gold px-8 py-3 rounded-lg shadow-soft font-medium hover:bg-gold hover:text-white transition">
+           Hacer Cotización
+        </a>
     </div>
+</section>
 
-    <!-- Menú móvil -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-white/15 bg-black/85 backdrop-blur-xl">
-      <nav class="flex flex-col px-6 py-4 space-y-3 text-sm">
-        <a href="#experiencias" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">Experiencias</a>
-        <a href="#salon" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">Salón & Alquiler</a>
-        <a href="#cotizar" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">Cotizar</a>
-        <a href="#galeria" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">Galería</a>
-        <a href="#faq" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">FAQ</a>
-        <a href="#contacto" class="text-slate-100 hover:text-pink-200" onclick="closeMobileMenu()">Contacto</a>
-      </nav>
+<!-- TEMÁTICAS -->
+<section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Temáticas Populares</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- Baby Shower -->
+        <div class="bg-white rounded-xl shadow-soft p-5">
+            <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold mb-2">Baby Shower</h3>
+            <p class="text-gray-600 text-sm">Nube de Amor, Osito Gold, Ángel, Rosa Gold, Azul Premium.</p>
+        </div>
+
+        <!-- Cumpleaños -->
+        <div class="bg-white rounded-xl shadow-soft p-5">
+            <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold mb-2">Cumpleaños Infantiles</h3>
+            <p class="text-gray-600 text-sm">Selva, Princesas, Stitch, Dinosaurios, Sonic y más.</p>
+        </div>
+
+        <!-- Bodas -->
+        <div class="bg-white rounded-xl shadow-soft p-5">
+            <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-lg mb-4">
+            <h3 class="title-font text-2xl gold mb-2">Bodas & Eventos</h3>
+            <p class="text-gray-600 text-sm">Bodas minimalistas, románticas, 15 años y compromisos.</p>
+        </div>
     </div>
-  </header>
+</section>
 
-  <main id="top" class="relative">
+<!-- COTIZADOR -->
+<section id="cotizador" class="py-20 px-6 bg-pink-50/50">
+    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Cotizador Automático</h2>
 
-    <!-- HERO ULTRA FUTURISTA -->
-    <section id="hero" class="pt-10 md:pt-16 pb-14 md:pb-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10 items-center">
-        <!-- Texto -->
-        <div class="space-y-5">
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="pill px-3 py-1 text-[0.7rem] uppercase tracking-[0.25em] text-slate-900">
-              Luxury · Futuristic · Feminine
-            </span>
-            <span class="text-[0.7rem] text-pink-100 uppercase tracking-[0.22em] flex items-center space-x-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Eventos que se sienten tuyos</span>
-            </span>
-          </div>
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-soft">
+        <form id="quoteForm" class="space-y-6">
 
-          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] leading-tight">
-            <span class="bg-gradient-to-r from-pink-200 via-lilac-300 to-amber-200 bg-clip-text text-transparent">
-              <span class="floating-word">Diseñamos</span>
-              <span class="floating-word">fiestas</span>
-              <span class="floating-word">que</span>
-              <span class="floating-word">parecen</span>
-            </span>
-            <br>
-            <span class="bg-gradient-to-r from-amber-200 via-pink-300 to-accent bg-clip-text text-transparent">
-              sacadas del futuro,
-            </span>
-            <br>
-            pero pensadas para ti hoy.
-          </h1>
-
-          <p class="text-sm md:text-base text-slate-100/90 max-w-xl">
-            Gaby Garzón Events transforma salones en universos delicados: decoración completa, salón
-            para <span class="font-semibold text-pink-soft">300 personas</span>, mantelería, vajilla
-            y estanterías para que no tengas que estresarte por nada.
-          </p>
-
-          <div class="flex flex-wrap items-center gap-4">
-            <a href="#cotizar" class="btn-primary rounded-full px-7 py-3.5 text-sm md:text-base font-semibold flex items-center space-x-2">
-              <i class="fab fa-whatsapp text-lg"></i>
-              <span>Quiero cotizar mi evento</span>
-            </a>
-            <a href="#galeria" class="btn-ghost rounded-full px-5 py-3 text-xs md:text-sm font-medium text-slate-50 flex items-center space-x-2">
-              <i class="fa-regular fa-circle-play text-lg text-pink-soft"></i>
-              <span>Ver montajes reales</span>
-            </a>
-          </div>
-
-          <div class="ticker mt-4">
-            <div class="ticker-track text-[0.7rem] uppercase tracking-[0.3em] text-pink-soft/90 py-2 px-4 space-x-10">
-              <span>Baby showers soñados</span>
-              <span>·</span>
-              <span>Bodas íntimas & glam</span>
-              <span>·</span>
-              <span>Cumpleaños con temática futurista</span>
-              <span>·</span>
-              <span>Eventos corporativos con estilo</span>
-              <span>·</span>
-              <span>Baby showers soñados</span>
-              <span>·</span>
-              <span>Bodas íntimas & glam</span>
+            <!-- Tipo de evento -->
+            <div>
+                <label class="font-semibold text-gray-700">Tipo de Evento</label>
+                <select class="w-full border rounded-lg p-3 mt-2" id="evento">
+                    <option>Baby Shower</option>
+                    <option>Cumpleaños Infantil</option>
+                    <option>Boda</option>
+                    <option>15 Años</option>
+                    <option>Evento Corporativo</option>
+                </select>
             </div>
-          </div>
-        </div>
 
-        <!-- Card 3D / teléfono futurista -->
-        <div class="relative">
-          <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-pink/40 blur-3xl"></div>
-          <div class="absolute bottom-0 -left-8 w-40 h-40 rounded-full bg-accent/30 blur-3xl"></div>
+            <!-- Temática -->
+            <div>
+                <label class="font-semibold text-gray-700">Temática</label>
+                <input id="tematica" type="text" class="w-full border rounded-lg p-3 mt-2"
+                       placeholder="Ej: Nube de Amor, Selva, Rosa Gold">
+            </div>
 
-          <div class="glass rounded-[2.2rem] p-4 sm:p-6 lg:p-7 tilt-card relative overflow-hidden" data-tilt>
-            <div class="absolute inset-0 opacity-40 pointer-events-none"
-                 style="background:radial-gradient(circle at 10% 0%,rgba(255,255,255,0.3),transparent 60%);mix-blend-mode:screen;"></div>
+            <!-- Tamaño del montaje -->
+            <div>
+                <label class="font-semibold text-gray-700">Tamaño del Montaje</label>
+                <select id="tamano" class="w-full border rounded-lg p-3 mt-2">
+                    <option>Básico</option>
+                    <option>Medio</option>
+                    <option>Premium</option>
+                    <option>Deluxe</option>
+                </select>
+            </div>
 
-            <div class="relative z-10 space-y-4">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                  <div class="w-10 h-10 rounded-2xl overflow-hidden border border-white/40 halo">
-                    <img src="https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&w=400"
-                         alt="Evento" class="w-full h-full object-cover">
-                  </div>
-                  <div>
-                    <div class="font-display text-sm text-pink-100">Signature Event</div>
-                    <div class="text-[0.7rem] text-slate-200 uppercase tracking-[0.18em]">Diseño & Montaje</div>
-                  </div>
+            <!-- Extras -->
+            <div>
+                <label class="font-semibold text-gray-700">Extras</label>
+                <div class="grid grid-cols-2 gap-3 mt-2">
+                    <label><input type="checkbox" value="Arco orgánico premium" class="extra"> Arco Premium</label>
+                    <label><input type="checkbox" value="Mesa dulce" class="extra"> Mesa Dulce</label>
+                    <label><input type="checkbox" value="Letras 3D" class="extra"> Letras 3D</label>
+                    <label><input type="checkbox" value="Photobooth" class="extra"> Photobooth</label>
                 </div>
-                <span class="text-[0.6rem] uppercase tracking-[0.2em] text-pink-soft/80">Gaby curated</span>
-              </div>
-
-              <!-- Simulación de pantalla con 3 bloques -->
-              <div class="bg-black/40 border border-white/10 rounded-2xl p-3 space-y-3">
-                <div class="flex items-center justify-between text-xs text-slate-200">
-                  <span>Capacidad salón</span>
-                  <span class="text-pink-soft font-semibold">Hasta 300 personas</span>
-                </div>
-                <div class="flex items-center justify-between text-xs text-slate-200">
-                  <span>Incluye</span>
-                  <span class="text-amber-200 font-semibold">Decoración · Mantelería · Vajilla</span>
-                </div>
-                <div class="flex items-center justify-between text-xs text-slate-200">
-                  <span>Estilo</span>
-                  <span class="text-accent font-semibold">Romántico Futurista</span>
-                </div>
-              </div>
-
-              <!-- "Timeline" de pasos flotante -->
-              <div class="mt-2">
-                <div class="text-[0.65rem] uppercase tracking-[0.2em] text-slate-300 mb-2">Tu recorrido</div>
-                <div class="flex items-center justify-between text-[0.7rem] text-slate-100">
-                  <div class="flex flex-col items-center flex-1">
-                    <span class="w-2 h-2 rounded-full bg-pink halo mb-1"></span>
-                    <span>Mensaje</span>
-                  </div>
-                  <div class="h-[2px] w-8 bg-gradient-to-r from-pink to-pink-soft/20"></div>
-                  <div class="flex flex-col items-center flex-1">
-                    <span class="w-2 h-2 rounded-full bg-gold halo mb-1"></span>
-                    <span>Diseño</span>
-                  </div>
-                  <div class="h-[2px] w-8 bg-gradient-to-r from-gold to-accent/20"></div>
-                  <div class="flex flex-col items-center flex-1">
-                    <span class="w-2 h-2 rounded-full bg-accent halo mb-1"></span>
-                    <span>Montaje</span>
-                  </div>
-                  <div class="h-[2px] w-8 bg-gradient-to-r from-accent to-pink-soft/25"></div>
-                  <div class="flex flex-col items-center flex-1">
-                    <span class="w-2 h-2 rounded-full bg-pink-soft halo mb-1"></span>
-                    <span>Celebración</span>
-                  </div>
-                </div>
-              </div>
-
-              <button onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})"
-                      class="w-full mt-2 bg-white/5 border border-white/20 rounded-xl py-2.5 text-xs text-pink-soft flex items-center justify-center space-x-2 hover:bg-white/10">
-                <i class="fab fa-whatsapp"></i>
-                <span>Completar mi cotización ahora</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCIAS -->
-    <section id="experiencias" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
-          <div>
-            <h2 class="font-display text-2xl sm:text-3xl text-pink-soft mb-2">
-              Experiencias para cada capítulo importante.
-            </h2>
-            <p class="text-sm md:text-base text-slate-100/90 max-w-xl">
-              No es solo decoración: es una coreografía de color, luz y detalles que hace que tus fotos,
-              tus recuerdos y tu corazón se vean increíbles.
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[0.7rem] uppercase tracking-[0.22em] text-pink-soft/90">
-            <span class="pill px-3 py-1">Cumpleaños</span>
-            <span class="pill px-3 py-1">Baby shower</span>
-            <span class="pill px-3 py-1">Bodas</span>
-            <span class="pill px-3 py-1">Corporativos</span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
-          <article class="tilt-card p-6 space-y-4" data-tilt>
-            <div class="flex items-center space-x-3">
-              <div class="service-icon">
-                <i class="fa-solid fa-cake-candles"></i>
-              </div>
-              <div>
-                <h3 class="font-semibold text-pink-soft text-lg">Cumpleaños con storyline</h3>
-                <p class="text-[0.7rem] text-slate-300 uppercase tracking-[0.18em]">
-                  Infantiles & adultos
-                </p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-100/90">
-              Fiestas donde cada rincón cuenta algo: la mesa principal, el backdrop, el área de fotos, la
-              iluminación… todo habla de la persona que celebra.
-            </p>
-            <ul class="text-xs text-slate-200/90 space-y-1">
-              <li>· Mesa principal con diseño futurista o temático</li>
-              <li>· Globos orgánicos, luces y detalles personalizados</li>
-              <li>· Rincones “wow” pensados para Instagram y TikTok</li>
-            </ul>
-          </article>
-
-          <article class="tilt-card p-6 space-y-4" data-tilt>
-            <div class="flex items-center space-x-3">
-              <div class="service-icon">
-                <i class="fa-solid fa-baby"></i>
-              </div>
-              <div>
-                <h3 class="font-semibold text-pink-soft text-lg">Baby showers & revelaciones</h3>
-                <p class="text-[0.7rem] text-slate-300 uppercase tracking-[0.18em]">
-                  Dulce & memorable
-                </p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-100/90">
-              Paletas suaves, detalles tiernos y un ambiente que se siente cálido, elegante y lleno de amor
-              por la nueva vida que llega.
-            </p>
-            <ul class="text-xs text-slate-200/90 space-y-1">
-              <li>· Backdrops delicados y orgánicos</li>
-              <li>· Área para fotos familiares y amigos</li>
-              <li>· Integración de juegos y momentos especiales</li>
-            </ul>
-          </article>
-
-          <article class="tilt-card p-6 space-y-4" data-tilt>
-            <div class="flex items-center space-x-3">
-              <div class="service-icon">
-                <i class="fa-solid fa-ring"></i>
-              </div>
-              <div>
-                <h3 class="font-semibold text-pink-soft text-lg">Bodas & aniversarios futuristas</h3>
-                <p class="text-[0.7rem] text-slate-300 uppercase tracking-[0.18em]">
-                  Romántico · Chic
-                </p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-100/90">
-              Escenarios donde las promesas brillan: luces suaves, mesas perfectas y un ambiente que se
-              siente íntimo, aunque haya muchos invitados.
-            </p>
-            <ul class="text-xs text-slate-200/90 space-y-1">
-              <li>· Mesa de novios y mesas de invitados coordinadas</li>
-              <li>· Caminos florales, velas y detalles metálicos</li>
-              <li>· Diseño alineado a tu paleta de boda y personalidad</li>
-            </ul>
-          </article>
-
-          <article class="tilt-card p-6 space-y-4 md:col-span-2 xl:col-span-3" data-tilt>
-            <div class="flex items-center space-x-3">
-              <div class="service-icon">
-                <i class="fa-solid fa-building-columns"></i>
-              </div>
-              <div>
-                <h3 class="font-semibold text-pink-soft text-lg">Eventos corporativos & lanzamientos</h3>
-                <p class="text-[0.7rem] text-slate-300 uppercase tracking-[0.18em]">
-                  Imagen & presencia
-                </p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-100/90">
-              Tu marca también merece verse espectacular: escenarios, backings, decoración sobria y moderna
-              para que cada foto respire profesionalismo y estilo.
-            </p>
-            <ul class="text-xs text-slate-200/90 grid grid-cols-1 sm:grid-cols-2 gap-y-1">
-              <li>· Escenarios y paneles con tu branding</li>
-              <li>· Decoración de mesas y área de networking</li>
-              <li>· Integración de merchandising y productos</li>
-              <li>· Ambientación para conferencias, lanzamientos o cenas</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SALÓN & ALQUILER -->
-    <section id="salon" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <!-- Visual -->
-        <div class="relative order-2 lg:order-1">
-          <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-pink/35 blur-3xl"></div>
-          <div class="absolute -bottom-8 -right-10 w-44 h-44 rounded-full bg-lilac/35 blur-3xl"></div>
-
-          <div class="grid grid-cols-2 gap-3 sm:gap-4 relative">
-            <div class="space-y-3 sm:space-y-4">
-              <div class="overflow-hidden rounded-[1.8rem] border border-white/20 glass">
-                <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Salón eventos" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-              </div>
-              <div class="overflow-hidden rounded-[1.6rem] border border-white/18 glass">
-                <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Mesa elegante" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-              </div>
-            </div>
-            <div class="space-y-3 sm:space-y-4 translate-y-5">
-              <div class="overflow-hidden rounded-[1.6rem] border border-white/18 glass">
-                <img src="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=800"
-                     alt="Decoración boda" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-              </div>
-              <div class="glass rounded-[1.8rem] p-4 text-xs text-slate-100/90">
-                <div class="font-display text-sm text-pink-soft mb-1">
-                  Salón & Alquiler premium
-                </div>
-                <p>
-                  Un espacio completo con sonido, distribución flexible y un catálogo propio de mantelería,
-                  vajilla y estanterías que armonizan con tu evento.
-                </p>
-                <div class="mt-3 flex flex-wrap gap-2 text-[0.65rem] uppercase tracking-[0.2em] text-pink-soft/90">
-                  <span class="pill px-2 py-1">300 personas</span>
-                  <span class="pill px-2 py-1">Mantelería & vajilla</span>
-                  <span class="pill px-2 py-1">Estanterías & fondos</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Texto -->
-        <div class="order-1 lg:order-2 space-y-5">
-          <h2 class="font-display text-2xl sm:text-3xl text-pink-soft">
-            El lugar, las mesas, los platos y los detalles en un mismo equipo.
-          </h2>
-          <p class="text-sm md:text-base text-slate-100/90 max-w-lg">
-            No tienes que coordinar con cinco proveedores distintos. Con Gaby Garzón Events puedes tener:
-            salón, montaje, mantelería, vajilla y estructuras, todo armonizado por la misma visión estética.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-100/90">
-            <div class="glass rounded-2xl p-4">
-              <div class="flex items-center space-x-2 text-pink-soft mb-1">
-                <i class="fa-solid fa-warehouse"></i>
-                <span class="font-semibold text-sm">Salón para 300 personas</span>
-              </div>
-              <p class="text-xs text-slate-200/90">
-                Distribución flexible: pista de baile, mesas redondas o rectangulares, zona infantil y
-                espacios para fotos.
-              </p>
             </div>
 
-            <div class="glass rounded-2xl p-4">
-              <div class="flex items-center space-x-2 text-amber-200 mb-1">
-                <i class="fa-solid fa-table"></i>
-                <span class="font-semibold text-sm">Mantelería pensada para fotos</span>
-              </div>
-              <p class="text-xs text-slate-200/90">
-                Manteles, cubremanteles, caminos y servilletas que combinan con la temática y se ven
-                perfectos en cámara.
-              </p>
-            </div>
-
-            <div class="glass rounded-2xl p-4">
-              <div class="flex items-center space-x-2 text-pink-soft mb-1">
-                <i class="fa-solid fa-utensils"></i>
-                <span class="font-semibold text-sm">Vajilla, copas & cubiertos</span>
-              </div>
-              <p class="text-xs text-slate-200/90">
-                Nada desentona: platos, copas, cubiertos y detalles cuidadosamente elegidos para mesas
-                armoniosas.
-              </p>
-            </div>
-
-            <div class="glass rounded-2xl p-4">
-              <div class="flex items-center space-x-2 text-accent mb-1">
-                <i class="fa-solid fa-shelves"></i>
-                <span class="font-semibold text-sm">Estanterías & estructuras</span>
-              </div>
-              <p class="text-xs text-slate-200/90">
-                Fondos, bases, columnas y estanterías decorativas para dulces, recuerdos y arreglos
-                especiales.
-              </p>
-            </div>
-          </div>
-
-          <a href="#cotizar" class="inline-flex items-center space-x-2 text-pink-soft text-xs md:text-sm hover:text-amber-200 transition">
-            <span>Cuéntanos qué parte necesitas (salón, decoración o todo).</span>
-            <i class="fa-solid fa-arrow-right-long text-[0.7rem]"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- COTIZACIÓN -->
-    <section id="cotizar" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="glass rounded-[2.4rem] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-8 lg:gap-10">
-          <!-- Texto -->
-          <div class="space-y-5">
-            <p class="pill inline-block px-3 py-1 text-[0.7rem] uppercase tracking-[0.24em] text-slate-900">
-              Cotización directa por WhatsApp
-            </p>
-            <h2 class="font-display text-2xl sm:text-3xl text-pink-soft">
-              Llena este pequeño formulario, y seguimos la conversación en WhatsApp.
-            </h2>
-            <p class="text-sm md:text-base text-slate-100/90">
-              No es un formulario frío. Es el primer paso para conocerte y empezar a imaginar tu evento
-              juntas: qué sueñas, cuánto quieres invertir y qué estilo te encanta.
-            </p>
-            <ul class="text-xs md:text-sm text-slate-100/90 space-y-2">
-              <li>· Recibirás un mensaje listo para enviar en WhatsApp con toda la info de tu evento.</li>
-              <li>· Luego puedes mandar fotos de referencia y ajustamos la propuesta.</li>
-              <li>· Si solo quieres alquiler (salón, mantelería, vajilla), también puedes indicarlo.</li>
-            </ul>
-          </div>
-
-          <!-- Formulario -->
-          <form id="quote-form" class="bg-black/30 rounded-2xl p-4 sm:p-5 lg:p-6 space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <input type="text" id="nombre" placeholder="Nombre completo*" required
-                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-              <input type="tel" id="telefono" placeholder="WhatsApp (+593...)*" required
-                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <select id="tipo_evento" required
-                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-                <option value="" disabled selected>Tipo de evento*</option>
-                <option value="Cumpleaños infantil">Cumpleaños infantil</option>
-                <option value="Cumpleaños adulto">Cumpleaños adulto</option>
-                <option value="Baby shower / Revelación">Baby shower / Revelación</option>
-                <option value="Boda / Aniversario">Boda / Aniversario</option>
-                <option value="Evento corporativo">Evento corporativo</option>
-                <option value="Primera comunión / Bautizo">Primera comunión / Bautizo</option>
-                <option value="Otro evento especial">Otro evento especial</option>
-              </select>
-              <input type="text" id="fecha_evento" placeholder="Fecha aproximada del evento"
-                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <input type="number" id="invitados" placeholder="Número aproximado de invitados"
-                     class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-              <select id="servicio"
-                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent">
-                <option value="" disabled selected>¿Qué necesitas?</option>
-                <option value="Decoración completa">Decoración completa</option>
-                <option value="Solo mesa principal">Solo mesa principal</option>
-                <option value="Alquiler de salón">Alquiler de salón</option>
-                <option value="Alquiler de estanterías / estructuras">Estanterías / estructuras</option>
-                <option value="Alquiler de mantelería y vajilla">Mantelería y vajilla</option>
-                <option value="Paquete completo (decoración + salón)">Paquete completo (decoración + salón)</option>
-              </select>
-            </div>
-
-            <textarea id="descripcion" rows="4"
-                      placeholder="Cuéntanos la temática, colores, ciudad, horario y cualquier detalle importante..."
-                      required
-                      class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/18 text-sm text-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/70 focus:border-transparent"></textarea>
-
-            <button type="submit"
-                    class="w-full btn-primary rounded-full py-3 text-sm md:text-base font-semibold flex items-center justify-center space-x-2">
-              <i class="fab fa-whatsapp text-lg"></i>
-              <span>Enviar mi cotización por WhatsApp</span>
+            <!-- Botón enviar a WhatsApp -->
+            <button type="button" onclick="sendQuote()"
+                    class="w-full bg-gold text-white py-3 rounded-lg shadow-soft text-lg font-medium hover:opacity-90">
+                Enviar Cotización por WhatsApp
             </button>
-            <p class="text-[0.7rem] text-slate-300 text-center">
-              *Se abrirá WhatsApp con el resumen listo para enviar a Gaby Garzón Events.*
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
+        </form>
+    </div>
+</section>
 
-    <!-- GALERÍA -->
-    <section id="galeria" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
-          <div>
-            <h2 class="font-display text-2xl sm:text-3xl text-pink-soft mb-2">
-              Galería de montajes & detalles.
-            </h2>
-            <p class="text-sm md:text-base text-slate-100/90 max-w-xl">
-              Aquí puedes sentir el estilo: texturas, luces, mesas, flores y esa vibra especial que hace
-              que cada evento sea único.
-            </p>
-          </div>
-          <div class="text-[0.75rem] text-slate-300">
-            Haz clic en una foto para verla en grande (modal 3D ✨).
-          </div>
+<!-- SCRIPT COTIZADOR -->
+<script>
+function sendQuote() {
+    let evento = document.getElementById("evento").value;
+    let tematica = document.getElementById("tematica").value;
+    let tamano = document.getElementById("tamano").value;
+
+    let extras = [];
+    document.querySelectorAll(".extra:checked").forEach(e => extras.push(e.value));
+
+    let mensaje = `Hola, quiero cotizar una decoración con Gaby Garzón Events:%0A%0A` +
+                  `Evento: ${evento}%0A` +
+                  `Temática: ${tematica}%0A` +
+                  `Tamaño: ${tamano}%0A` +
+                  `Extras: ${extras.join(", ")}%0A`;
+
+    window.open(`https://wa.me/593#########?text=${mensaje}`, "_blank");
+}
+</script>
+
+<!-- GALERÍA -->
+<section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Galería Gaby Garzón Events</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+        <img src="https://i.postimg.cc/DytQktmM/boda.png" class="rounded-xl shadow-soft">
+        <img src="https://i.postimg.cc/7Z6F1W0L/baby.png" class="rounded-xl shadow-soft">
+        <img src="https://i.postimg.cc/fRzP3tcM/kids.png" class="rounded-xl shadow-soft">
+    </div>
+</section>
+
+<!-- FORMULARIO DE RESERVA -->
+<section class="py-20 px-6 bg-pink-50/50">
+    <h2 class="title-font text-4xl text-center font-bold gold mb-12">Reserva tu Fecha</h2>
+
+    <form name="reservas" method="POST" data-netlify="true" class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-soft space-y-6">
+
+        <input type="hidden" name="form-name" value="reservas">
+
+        <div>
+            <label class="font-semibold text-gray-700">Nombre</label>
+            <input type="text" name="nombre" required class="w-full border p-3 rounded-lg mt-1">
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          <!-- Cambia por tus fotos cuando quieras -->
-          <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 1"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 2"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 3"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 4"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/2253872/pexels-photo-2253872.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/2253876/pexels-photo-2253876.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 5"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/2253876/pexels-photo-2253876.jpeg?auto=compress&cs=tinysrgb&w=1600">
-          <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600"
-               alt="Evento 6"
-               class="gallery-item w-full h-auto object-cover rounded-[1.4rem] cursor-pointer hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink/40 transition duration-300"
-               loading="lazy"
-               data-img-url="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        <div>
+            <label class="font-semibold text-gray-700">Fecha del Evento</label>
+            <input type="date" name="fecha" required class="w-full border p-3 rounded-lg mt-1">
         </div>
-      </div>
-    </section>
 
-    <!-- MODAL GALERÍA -->
-    <div id="gallery-modal" class="fixed inset-0 flex items-center justify-center p-4" onclick="closeModal()">
-      <div id="modal-content-wrapper" class="relative" onclick="event.stopPropagation()">
-        <button id="modal-prev" class="modal-arrow">
-          <i class="fas fa-chevron-left"></i>
+        <div>
+            <label class="font-semibold text-gray-700">WhatsApp</label>
+            <input type="text" name="whatsapp" required class="w-full border p-3 rounded-lg mt-1">
+        </div>
+
+        <div>
+            <label class="font-semibold text-gray-700">Temática</label>
+            <input type="text" name="tematica" class="w-full border p-3 rounded-lg mt-1">
+        </div>
+
+        <button class="w-full bg-gold text-white py-3 rounded-lg text-lg font-medium shadow-soft hover:opacity-90">
+            Enviar Reserva
         </button>
+    </form>
+</section>
 
-        <img id="modal-image" src="" alt="Evento en detalle">
+<!-- FOOTER -->
+<footer class="py-8 text-center">
+    <p class="text-gray-600 text-sm">© 2025 Gaby Garzón Events · Todos los derechos reservados</p>
+</footer>
 
-        <button id="modal-next" class="modal-arrow">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-
-        <button class="absolute -top-3 -right-3 text-white text-2xl bg-black/80 rounded-full w-9 h-9 flex items-center justify-center hover:bg-pink hover:text-slate-900 transition"
-                onclick="closeModal()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- VIDEO ESTILO TELÉFONO -->
-    <section id="video" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-display text-2xl sm:text-3xl text-pink-soft mb-3">
-          Mira cómo un salón vacío se transforma en celebración.
-        </h2>
-        <p class="text-sm md:text-base text-slate-100/90 max-w-2xl mx-auto mb-8">
-          Reemplaza este video con uno tuyo cuando quieras; el marco ya está listo para lucir como un teléfono
-          futurista.
-        </p>
-
-        <div class="relative mx-auto w-[260px] sm:w-[300px] md:w-[340px] rounded-[2rem] border-[11px] border-black/90 shadow-[0_0_40px_rgba(255,138,212,0.9)] overflow-hidden bg-black tilt-card" data-tilt>
-          <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-700 rounded-full z-10"></div>
-          <iframe 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1&playsinline=1"
-            class="w-full aspect-[9/16] rounded-[1.8rem] border-none"
-            title="Gaby Garzón Events - Video de eventos"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <p class="text-[0.7rem] text-slate-400 mt-4 italic">
-          *Solo cambia el enlace de YouTube en el código cuando tengas tu video real.*
-        </p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="pb-14 md:pb-18">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
-          <div class="max-w-xl">
-            <h2 class="font-display text-2xl sm:text-3xl text-pink-soft mb-3">Preguntas que muchas clientas ya hicieron.</h2>
-            <p class="text-sm md:text-base text-slate-100/90">
-              Si tú también las tienes, ya estás un paso más cerca de tu evento. Si falta algo, nos
-              escribes y lo resolvemos en un mensaje.
-            </p>
-          </div>
-        </div>
-
-        <div class="max-w-3xl space-y-4">
-          <div class="glass rounded-2xl overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-pink-soft">
-              <span>¿Con cuánta anticipación debo reservar mi fecha?</span>
-              <i class="fas fa-chevron-down text-pink-soft text-sm transition"></i>
-            </button>
-            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-100 border-t border-white/10">
-              <p>
-                Idealmente mínimo un mes antes. Para fechas altas (diciembre, Día de la Madre, Día del
-                Niño, etc.) es mejor reservar con más tiempo porque la agenda se llena rápido.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass rounded-2xl overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-pink-soft">
-              <span>¿Pueden decorar en otro lugar que no sea su salón?</span>
-              <i class="fas fa-chevron-down text-pink-soft text-sm transition"></i>
-            </button>
-            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-100 border-t border-white/10">
-              <p>
-                Sí. Podemos llevar la decoración a tu casa, quinta o local. Solo necesitamos la dirección
-                y, si es posible, algunas fotos o medidas del espacio.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass rounded-2xl overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-pink-soft">
-              <span>¿El alquiler de mantelería y vajilla incluye lavado?</span>
-              <i class="fas fa-chevron-down text-pink-soft text-sm transition"></i>
-            </button>
-            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-100 border-t border-white/10">
-              <p>
-                Sí, incluye lavado. Solo pedimos que se devuelva completo, sin exceso de restos de comida y
-                en el tiempo acordado.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass rounded-2xl overflow-hidden">
-            <button class="faq-toggle w-full flex justify-between items-center px-5 py-4 text-left text-sm md:text-base font-semibold text-pink-soft">
-              <span>¿Tienen paquetes completos (decoración + salón + mesa de dulces)?</span>
-              <i class="fas fa-chevron-down text-pink-soft text-sm transition"></i>
-            </button>
-            <div class="faq-content hidden px-5 pb-4 pt-0 text-sm text-slate-100 border-t border-white/10">
-              <p>
-                Sí. Podemos armar paquetes integrales según tu presupuesto: decoración, salón, mesa de dulces,
-                mantelería y vajilla. En la cotización te sugerimos opciones según lo que sueñas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="pb-12 md:pb-14">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="border-t border-white/12 pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-8">
-          <div class="space-y-4">
-            <h2 class="font-display text-xl sm:text-2xl text-pink-soft">Hablemos de tu evento, sin compromiso.</h2>
-            <p class="text-sm md:text-base text-slate-100/90 max-w-lg">
-              Puedes escribirnos directamente. No importa si tienes todo claro o solo una idea vaga: de
-              eso se trata, de aterrizarlo juntas.
-            </p>
-            <div class="space-y-3 text-sm text-slate-100/90">
-              <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-location-dot text-pink-soft"></i>
-                <span>Shushufindi, Provincia de Sucumbíos, Ecuador.</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fa-brands fa-whatsapp text-emerald-300"></i>
-                <div>
-                  <!-- Usa este número para eventos -->
-                  <a href="https://wa.me/593969881264" target="_blank" class="hover:text-pink-soft">
-                    +593 96 988 1264
-                  </a>
-                  <div class="text-xs text-slate-300">WhatsApp & llamadas</div>
-                </div>
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-envelope text-amber-200"></i>
-                <a href="mailto:gabygarzon.events@example.com" class="hover:text-pink-soft">
-                  gabygarzon.events@example.com
-                </a>
-              </div>
-              <div class="flex items-center space-x-4 pt-1">
-                <a href="#" class="text-xl text-slate-100 hover:text-pink-soft"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" class="text-xl text-slate-100 hover:text-pink-soft"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass rounded-2xl p-4 sm:p-5 text-xs text-slate-100/90">
-            <div class="font-display text-sm text-pink-soft mb-2">Tip antes de escribir:</div>
-            <p>
-              Si tienes fotos guardadas de eventos que te gustan (Pinterest, Instagram, TikTok), guárdalas
-              a la mano. Después de tu mensaje inicial, puedes enviarlas por WhatsApp y creamos algo
-              inspirado en eso, pero único para ti.
-            </p>
-            <p class="mt-3">
-              También podemos trabajar a partir de tus colores favoritos, una película, una canción o una
-              frase que quieras que se sienta en tu evento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/12 py-5 text-center text-[0.75rem] text-slate-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      &copy; 2024 Gaby Garzón Events · Eventos futuristas, elegantes y llenos de amor al detalle.
-    </div>
-  </footer>
-
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a id="float-whatsapp-btn"
-     href="https://wa.me/593969881264?text=%C2%A1Hola%20Gaby!%20%F0%9F%8E%89%20Acabo%20de%20ver%20tu%20web%20y%20quiero%20informaci%C3%B3n%20para%20un%20evento."
-     target="_blank"
-     class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-xl transition duration-300 hover:bg-[#1ebe5d] hover:scale-110">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- JS PRINCIPAL -->
-  <script>
-    const WHATSAPP_NUMBER = '593969881264';
-
-    /* === Menú móvil === */
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    function toggleMobileMenu(){
-      mobileMenu.classList.toggle('hidden');
-      const icon = menuToggle.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
-    }
-    function closeMobileMenu(){
-      if(!mobileMenu.classList.contains('hidden')) toggleMobileMenu();
-    }
-    if(menuToggle){
-      menuToggle.addEventListener('click', toggleMobileMenu, { passive:true });
-    }
-
-    /* === Formulario → WhatsApp === */
-    const quoteForm = document.getElementById('quote-form');
-    if(quoteForm){
-      quoteForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        const nombre   = document.getElementById('nombre').value;
-        const telefono = document.getElementById('telefono').value;
-        const tipo_evento = document.getElementById('tipo_evento').value;
-        const fecha_evento = document.getElementById('fecha_evento').value;
-        const invitados = document.getElementById('invitados').value;
-        const servicio = document.getElementById('servicio').value;
-        const descripcion = document.getElementById('descripcion').value;
-
-        const quoteMessage =
-`*COTIZACIÓN DE EVENTO - Gaby Garzón Events* ✨
-
-*Datos de la clienta:*
-Nombre: ${nombre}
-WhatsApp: ${telefono}
-
-*Evento:*
-Tipo de evento: ${tipo_evento}
-Fecha aproximada: ${fecha_evento || 'Por definir'}
-Número de invitados: ${invitados || 'Por definir'}
-Servicio requerido: ${servicio || 'Por definir'}
-
-*Detalles del evento:*
-${descripcion}
-
-Te escribo desde la página web y me gustaría recibir una propuesta y cotización 🤍`;
-
-        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteMessage)}`;
-        window.open(waUrl, '_blank');
-      }, { passive:true });
-    }
-
-    /* === Modal Galería con navegación 3D === */
-    const modal = document.getElementById('gallery-modal');
-    const modalImage = document.getElementById('modal-image');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const modalWrapper = document.getElementById('modal-content-wrapper');
-    const prevBtn = document.getElementById('modal-prev');
-    const nextBtn = document.getElementById('modal-next');
-
-    let galleryUrls = [];
-    let currentIndex = 0;
-
-    galleryItems.forEach((item, index)=>{
-      const url = item.getAttribute('data-img-url');
-      galleryUrls.push(url);
-      item.addEventListener('click', ()=>{
-        openModal(index);
-      }, { passive:true });
-    });
-
-    function showImage(index){
-      if(galleryUrls.length === 0) return;
-      if(index < 0) index = galleryUrls.length - 1;
-      if(index >= galleryUrls.length) index = 0;
-      currentIndex = index;
-      modalImage.style.transform = 'rotateX(8deg) rotateY(-12deg) scale(0.9)';
-      setTimeout(()=>{
-        modalImage.src = galleryUrls[currentIndex];
-        modalImage.style.transform = 'rotateX(0deg) rotateY(0deg) scale(0.96)';
-      },150);
-    }
-
-    function openModal(index){
-      showImage(index);
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      setTimeout(()=>{
-        modalWrapper.style.transform = 'rotateY(10deg)';
-      },40);
-    }
-
-    function closeModal(){
-      modalWrapper.style.transform = 'rotateY(0deg)';
-      modalImage.style.transform = 'rotateX(0deg) rotateY(0deg) scale(0.9)';
-      setTimeout(()=>{
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      },220);
-    }
-
-    function showNext(){
-      showImage(currentIndex + 1);
-    }
-    function showPrev(){
-      showImage(currentIndex - 1);
-    }
-
-    if(prevBtn){
-      prevBtn.addEventListener('click', (e)=>{
-        e.stopPropagation();
-        showPrev();
-      });
-    }
-    if(nextBtn){
-      nextBtn.addEventListener('click', (e)=>{
-        e.stopPropagation();
-        showNext();
-      });
-    }
-
-    // Swipe en móviles
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    function handleTouchStart(e){
-      touchStartX = e.changedTouches[0].screenX;
-    }
-    function handleTouchEnd(e){
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchEndX - touchStartX;
-      if(Math.abs(diff) > 50){
-        if(diff < 0){
-          showNext();
-        }else{
-          showPrev();
-        }
-      }
-    }
-
-    if(modalImage){
-      modalImage.addEventListener('touchstart', handleTouchStart, { passive:true });
-      modalImage.addEventListener('touchend', handleTouchEnd, { passive:true });
-    }
-
-    document.addEventListener('keydown', function(event){
-      if(modal.style.display === 'flex'){
-        if(event.key === 'Escape'){
-          closeModal();
-        }else if(event.key === 'ArrowRight'){
-          showNext();
-        }else if(event.key === 'ArrowLeft'){
-          showPrev();
-        }
-      }
-    });
-
-    /* === FAQ acordeón === */
-    const faqToggles = document.querySelectorAll('.faq-toggle');
-    faqToggles.forEach(toggle=>{
-      toggle.addEventListener('click', ()=>{
-        const content = toggle.nextElementSibling;
-        const icon = toggle.querySelector('i');
-
-        if(content.classList.contains('hidden')){
-          faqToggles.forEach(other=>{
-            if(other!==toggle){
-              other.nextElementSibling.classList.add('hidden');
-              const ic = other.querySelector('i');
-              ic.classList.remove('fa-chevron-up');
-              ic.classList.add('fa-chevron-down');
-            }
-          });
-          content.classList.remove('hidden');
-          icon.classList.remove('fa-chevron-down');
-          icon.classList.add('fa-chevron-up');
-        }else{
-          content.classList.add('hidden');
-          icon.classList.remove('fa-chevron-up');
-          icon.classList.add('fa-chevron-down');
-        }
-      }, { passive:true });
-    });
-
-    /* === Tilt 3D simple para tarjetas === */
-    const tiltCards = document.querySelectorAll('[data-tilt]');
-    tiltCards.forEach(card=>{
-      card.addEventListener('mousemove', (e)=>{
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -6;
-        const rotateY = ((x - centerX) / centerX) * 6;
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01,1.01,1.01)`;
-      });
-      card.addEventListener('mouseleave', ()=>{
-        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
-      });
-    });
-
-    /* === Pausa animaciones mientras se desplaza === */
-    let scrollTimer;
-    window.addEventListener('scroll', ()=>{
-      document.documentElement.classList.add('is-scrolling');
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(()=>{
-        document.documentElement.classList.remove('is-scrolling');
-      }, 120);
-    }, { passive:true });
-  </script>
 </body>
 </html>
